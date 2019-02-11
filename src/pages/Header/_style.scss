@@ -1,0 +1,34 @@
+.HeaderWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  display: flex;
+  width: 81.4%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+
+  .NavWrapper {
+    a {
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: $white;
+      position: relative;
+      text-decoration: none;
+      margin: $tiny;
+
+      &.Active:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: white;
+        bottom: -5px;
+        left: calc(50% - 10px);
+      }
+    }
+  }
+}

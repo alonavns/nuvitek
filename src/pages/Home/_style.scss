@@ -1,0 +1,14 @@
+.HomeWrapper {
+  background-image: url("assets/images/back_home.svg");
+  background-repeat: no-repeat;
+  background-size: 91vw;
+  min-height: 45.5vw;
+  position: relative;
+
+  .Cloud {
+    width: 38%;
+    position: absolute;
+    right: 17.75%;
+    bottom: 13%;
+  }
+}
