@@ -4,7 +4,7 @@ class Button extends Component {
   render() {
     return (
       <div
-        className={`Button`}
+        className={`Button ${this.props.green ? 'Green' : ''}`}
         onClick={this.props.onClick || null}
         style={{ ...this.props.style }}
       >

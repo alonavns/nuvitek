@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import FadeIn from 'react-fade-in'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
-import { Header, Home } from 'pages'
+import { Header, Footer, Home } from 'pages'
 
 import './App.scss'
 
@@ -21,6 +21,7 @@ class App extends Component {
               <Redirect exact path='/' to={'home'} />
             </Switch>
           }
+          <Footer />
         </div>
       </FadeIn>
     )

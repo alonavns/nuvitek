@@ -27,5 +27,10 @@ body {
     }
   }
 }
+
+div > h1,
+div > p {
+  margin: 0;
+}
 @import 'components/style';
 @import 'pages/style';

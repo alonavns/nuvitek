@@ -4,11 +4,47 @@
   background-size: 91vw;
   min-height: 45.5vw;
   position: relative;
+  padding: 200px 0;
 
   .Cloud {
     width: 38%;
     position: absolute;
     right: 17.75%;
     bottom: 13%;
+  }
+
+  .Ribbon {
+    color: $color-yellow;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    background: $yellow-ribbon;
+
+    border-radius: 0 18px 18px 0;
+    padding: 10px 25px 10px 16.7%;
+    display: inline-block;
+
+    img {
+      margin-left: 5px;
+      height: 13px;
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .Intro {
+    margin-left: 16.7%;
+
+    h1 {
+      font-weight: 600;
+      line-height: 60px;
+      font-size: 45px;
+      letter-spacing: 0.5px;
+      color: #FFFFFF;
+    }
   }
 }
