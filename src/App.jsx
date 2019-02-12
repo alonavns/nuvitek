@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import FadeIn from 'react-fade-in'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
-import { Header, Footer, Home } from 'pages'
+import { Header, Footer, Home, About, Contact } from 'pages'
 
 import './App.scss'
 
@@ -15,9 +15,12 @@ class App extends Component {
           {
             <Switch>
               <Route exact path='/home' render={() => <Home />} />
-              {/* <Route path='/dashboard'
-                render={({ match }) => <Dashboard match={match} />}
-              /> */}
+              <Route path='/about'
+                render={({ match }) => <Contact match={match} />}
+              />
+              <Route exact path='/services' render={() => <About />} />
+              <Route exact path='/news' render={() => <About />} />
+              <Route exact path='/team' render={() => <About />} />
               <Redirect exact path='/' to={'home'} />
             </Switch>
           }
