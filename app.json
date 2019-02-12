@@ -2,7 +2,7 @@
   "name": "nuvitek",
   "description": "Generate Frontend from Provided Design like Sketch, PSD, AI and PDF.",
   "scripts": {
-    "postdeploy": "yarn start",
+    "postdeploy": "yarn react-start",
     "pr-predestroy": "yarn install"
   },
   "env": {
