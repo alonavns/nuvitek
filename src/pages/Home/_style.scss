@@ -1,50 +1,456 @@
 .HomeWrapper {
-  background-image: url("assets/images/back_home.svg");
-  background-repeat: no-repeat;
-  background-size: 91vw;
-  min-height: 45.5vw;
-  position: relative;
-  padding: 200px 0;
+  .IntroWrapper {
+    background-image: url("assets/images/back_home.svg");
+    background-repeat: no-repeat;
+    background-size: 91vw;
+    min-height: 45.5vw;
+    position: relative;
+    padding: 200px 0;
 
-  .Cloud {
-    width: 38%;
-    position: absolute;
-    right: 17.75%;
-    bottom: 13%;
-  }
+    .Cloud {
+      width: 38%;
+      position: absolute;
+      right: 17.75%;
+      bottom: 13%;
+    }
 
-  .Ribbon {
-    color: $color-yellow;
-    font-weight: bold;
-    line-height: 15px;
-    font-size: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    background: $yellow-ribbon;
+    .Ribbon {
+      color: $color-yellow;
+      font-weight: bold;
+      line-height: 15px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      background: $yellow-ribbon;
 
-    border-radius: 0 18px 18px 0;
-    padding: 10px 25px 10px 16.7%;
-    display: inline-block;
+      border-radius: 0 18px 18px 0;
+      padding: 10px 25px 10px 16.7%;
+      display: inline-block;
 
-    img {
-      margin-left: 5px;
-      height: 13px;
-      position: relative;
-      top: 1px;
+      img {
+        margin-left: 5px;
+        height: 13px;
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    .Intro {
+      margin-left: 16.7%;
+      width: 60%;
+      max-width: 510px;
+
+      h1 {
+        font-weight: 600;
+        line-height: 60px;
+        font-size: 45px;
+        letter-spacing: .5px;
+        color: #FFFFFF;
+        margin: 30px 0;
+      }
+
+      p {
+        line-height: 27px;
+        font-size: 18px;
+        letter-spacing: .5px;
+        color: #EEFEFF;
+        margin-bottom: 50px;
+      }
+
+      .Button {
+        float: left;
+      }
     }
   }
 
-  .Intro {
-    margin-left: 16.7%;
+  section {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  > *:not(:first-child) {
+    label {
+      font-weight: 600;
+      line-height: 20px;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #48B3B7;
+      background: rgba(65, 188, 192, 0.1);
+      border-radius: 19.5px;
+      padding: 5px 18px;
+      display: inline-block;
+    }
 
     h1 {
       font-weight: 600;
       line-height: 60px;
       font-size: 45px;
-      letter-spacing: 0.5px;
-      color: #FFFFFF;
+      text-align: center;
+      letter-spacing: .5px;
+      color: #112645;
+      margin-top: 10px;
+      margin-bottom: 28px;
     }
+
+    p {
+      line-height: 30px;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: .5px;
+      color: #284D82;
+      max-width: 842px;
+      margin: 0 auto 82px;
+    }
+
+    .Buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 100px;
+
+      .Button {
+        margin: 0 10px;
+      }
+    }
+
+    &.EmailForm {
+      label {
+        color: #95F2F5;
+        background: linear-gradient(90deg, #40C2C6 -1.91%, #41BBBF 100%);
+      }
+
+      h1 {
+        color: #FFFFFF;
+      }
+
+      p {
+        color: #EEFEFF;
+        margin-bottom: 63px;
+      }
+    }
+  }
+
+  .Section1 {
+    text-align: center;
+    margin-top: 125px;
+
+    .ThingsCanDo {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      margin-bottom: 86px;
+
+      > div {
+        width: 33%;
+        max-width: 400px;
+
+        * {
+          text-align: left;
+        }
+
+        .ImageWrapper {
+          height: 208px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        h1 {
+          font-weight: 600;
+          line-height: 50px;
+          font-size: 36px;
+          letter-spacing: .5px;
+          color: #112645;
+
+          margin: 33px 0 20px;
+        }
+
+        p {
+          line-height: 25px;
+          font-size: 16px;
+          letter-spacing: .5px;
+          color: #284D82;
+          margin-bottom: 20px;
+        }
+
+        a {
+          font-weight: bold;
+          line-height: 15px;
+          font-size: 15px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+
+          color: #48B3B7;
+        }
+
+        ul {
+          list-style: none;
+          padding-left: 40px;
+
+          li {
+            line-height: 25px;
+            font-size: 18px;
+            letter-spacing: .5px;
+            color: #284D82;
+            margin-bottom: 10px;
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              background: url("assets/images/home/section1/list_style.svg");
+              width: 25px;
+              height: 25px;
+              left: -40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Clients {
+    margin-bottom: 71px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .EmailForm {
+    background-image: url("assets/images/back_float.svg");
+    background-position: center;
+    text-align: center;
+    padding: 268px 0;
+
+    .SliddingForm {
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto 80px;
+      position: relative;
+
+      input.Input {
+        line-height: 30px;
+        font-size: 18px;
+        letter-spacing: .5px;
+        color: #284D82;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: 45px;
+        border: none;
+        padding: 27px 50px;
+        outline: none;
+
+        &.Valid {
+          width: calc(100% - 96px);
+        }
+      }
+
+      .Button {
+        line-height: 85px;
+        border-radius: 45px;
+        text-align: right;
+        font-size: 20px;
+        letter-spacing: 1.33333px;
+      }
+    }
+
+    .Info {
+      display: flex;
+      justify-content: center;
+
+      > div {
+        background: linear-gradient(180deg, rgba(65, 187, 190, 0.0001) 0%, #44C7CA 100%);
+        border-radius: 5px;
+        padding: 40px 0;
+        width: 25%;
+        max-width: 290px;
+        margin: 20px;
+        font-weight: 600;
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: .5px;
+        color: #FFFFFF;
+
+        > span {
+          font-size: 20px;
+          text-align: center;
+          letter-spacing: .5px;
+          color: #FFFFFF;
+          line-height: normal;
+          font-weight: normal;
+          display: block;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  section.Blog {
+    .Blogs {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 80px;
+
+      .Main {
+        position: relative;
+        display: flex;
+        max-width: 840px;
+
+        .Back {
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden;
+          display: inline-grid;
+
+          img {
+            width: 100%;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(67, 192, 196, 0.7) 0%, rgba(55, 170, 173, 0.8) 100%), linear-gradient(180deg, rgba(39, 41, 80, 0.0110111) 67.46%, #272950 100%);
+          }
+        }
+
+        .Info {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 45px 42px;
+          width: 100%;
+
+          .UserInfo {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 45px;
+              height: 45px;
+              border-radius: 50%;
+              margin-right: 10px;
+              margin-top: 3px;
+            }
+
+            .User {
+              color: $white;
+
+              .Name {
+                line-height: 27px;
+                font-size: 20px;
+                letter-spacing: .5px;
+                margin-bottom: 7px;
+              }
+
+              .Extra {
+                display: flex;
+                line-height: 14px;
+                font-size: 14px;
+
+                i {
+                  margin-right: 10px;
+                }
+
+                > div {
+                  margin-right: 30px;
+                }
+              }
+            }
+          }
+
+          .Divider {
+            background: linear-gradient(270deg, #38ACAF 0%, #ffffff 100%);
+            height: 1px;
+            width: 100%;
+            opacity: .5;
+            margin: 19px 0;
+          }
+
+          h1 {
+            font-weight: 600;
+            line-height: 50px;
+            font-size: 36px;
+            letter-spacing: .5px;
+
+            color: #FFFFFF;
+            margin: 0;
+            text-align: left;
+          }
+        }
+      }
+
+      .Examples {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .Example {
+          position: relative;
+
+          img {
+            width: 400px;
+            border-radius: 5px;
+            display: block;
+          }
+
+          .Image:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(360deg, rgba(39, 41, 80, 0.8) 0%, rgba(39, 41, 80, 0.0001) 50%);
+          }
+
+          .Title {
+            font-weight: 600;
+            line-height: 32px;
+            font-size: 24px;
+            letter-spacing: .5px;
+
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 21px 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.LikeWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    color: white;
+  }
+
+  &.Liked {
+    background: #DCDD4D;
   }
 }

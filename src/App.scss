@@ -28,9 +28,13 @@ body {
   }
 }
 
-div > h1,
-div > p {
+div > h1, div > p, section > h1, section p {
   margin: 0;
+}
+
+* {
+  background-repeat: no-repeat;
+  transition: all .2s;
 }
 @import 'components/style';
 @import 'pages/style';
