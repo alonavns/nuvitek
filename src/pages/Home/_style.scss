@@ -294,6 +294,8 @@
   }
 
   section.Blog {
+    margin-top: 100px;
+
     .Blogs {
       text-align: left;
       display: flex;
@@ -322,7 +324,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background: linear-gradient(180deg, rgba(67, 192, 196, 0.7) 0%, rgba(55, 170, 173, 0.8) 100%), linear-gradient(180deg, rgba(39, 41, 80, 0.0110111) 67.46%, #272950 100%);
+            background: linear-gradient(180deg, rgba(39, 41, 80, 0.0110111) 67.46%, #272950 100%);
           }
         }
 
@@ -432,6 +434,9 @@
       }
     }
   }
+
+  section.About {
+    }
 }
 
 .LikeWrapper {

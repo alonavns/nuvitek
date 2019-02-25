@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import { Button, Input } from 'components/_Common'
-import cloud from 'assets/images/home_cloud.svg'
 import arrow from 'assets/images/arrow_right.svg'
 import image1 from 'assets/images/home/section1/image1.svg'
 import image2 from 'assets/images/home/section1/image2.svg'
@@ -11,6 +10,8 @@ import blog from 'assets/images/home/blog.png'
 import blogUser from 'assets/images/home/blog_user.png'
 import blog1 from 'assets/images/home/blog_example1.png'
 import blog2 from 'assets/images/home/blog_example2.png'
+import icon1 from 'assets/images/home/about/icon1.svg'
+import icon2 from 'assets/images/home/about/icon2.svg'
 
 class Home extends Component {
   state = {
@@ -29,7 +30,6 @@ class Home extends Component {
     return (
       <div className="HomeWrapper">
         <div className={`IntroWrapper`}>
-          <img className='Cloud' src={cloud} />
           <div className='Ribbon'>
             Take Survey
           <img src={arrow} />
@@ -173,6 +173,20 @@ class Home extends Component {
           <div className="Buttons">
             <Button label='Contact Us' />
             <Button label='See All Blog' green />
+          </div>
+        </section>
+        <section className="About">
+          <div>
+            <img src={icon1} />
+            <h2>Our Experience</h2>
+            <p>Our team of engineers has more than 20 years of experience delivering successful IT projects to Federal Government and commercial clients. With our strong pool of talented, expert staff, Nuvitek has a sterling track record of providing innovative and reliable IT solutions to both government and commercial clients.</p>
+            <a>LEARN MORE ABOUT US</a>
+          </div>
+          <div>
+            <img src={icon2} />
+            <h2>Equal Employment Opportunity</h2>
+            <p>Nuvitek LLC. is an Equal Employment Opportunity employer. Nuvitek is committed to providing equal opportunity to all applicants and employees regardless of race, color, creed, religion, national origin, sexual orientation, age, gender, disability, medical condition.</p>
+            <a>MORE ABOUT JOB OPPORTUNITIES</a>
           </div>
         </section>
         <div className="Clients">
