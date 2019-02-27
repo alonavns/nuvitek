@@ -1,13 +1,33 @@
 @import 'assets/styles/variables';
 
 body {
-  background: white;
+  background: $white;
   color: $color;
   font-family: $font-family;
   font-weight: $font-weight;
 
   * {
     box-sizing: border-box;
+  }
+
+  a {
+    color: $color;
+  }
+
+  .white {
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .yellow {
+    color: $yellow;
+
+    a {
+      color: $yellow;
+    }
   }
 }
 
@@ -36,5 +56,12 @@ div > h1, div > p, section > h1, section p {
   background-repeat: no-repeat;
   transition: all .2s;
 }
+
+.AppWrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+@import 'assets/styles/_common';
 @import 'components/style';
 @import 'pages/style';

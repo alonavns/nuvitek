@@ -1,30 +1,60 @@
-$color: #112645;
-$color-cyan: rgba(102, 104, 144, 0.2);
-$color-light: #A2C1EE;
-$white: #ffffff;
-$color-yellow: #DCDD4D;
-$green: linear-gradient(270deg, #43C0C4 0%, #37AAAD 100%);
-$green-gradient: linear-gradient(270deg, #43C0C4 0%, #179FA4 100%);
-$yellow: linear-gradient(270deg, #D5D655 0.28%, #DCDD4D 100%);
-$yellow-ribbon: linear-gradient(90deg, rgba(200, 201, 97, 0.0001) 0%, rgba(220, 221, 77, 0.4) 100%);
-
 $font-family: 'Open Sans';
 $font-weight: normal;
 
-$tiny: 25px;
-$low_height: 35px;
-$common_height: 65px;
+$color: #112645;
+$white: #ffffff;
+$yellow: #DCDD4D;
+$green: #37AAAD;
+$color-cyan: rgba(102, 104, 144, 0.2);
+$color-light: #A2C1EE;
+$green-grad: linear-gradient(270deg, #43C0C4 0%, #37AAAD 100%);
+$yellow-grad: linear-gradient(270deg, #D5D655 0.28%, #DCDD4D 100%);
+$yellow-ribbon: linear-gradient(90deg, rgba(200, 201, 97, 0.0001) 0%, rgba(220, 221, 77, 0.4) 100%);
 
 $letter: .5px;
+$letter1: 1px;
+$letter1-5: 1.5px;
+$letter3: 3px;
+$bold: bold;
+
 $h1: 45px;
 $h1-height: 60px;
+$a: 15px;
+$a-height: 20px;
 $p: 18px;
 $p-height: 30px;
+$p-naw-height: 27px;
 $p1: 16px;
 $p1-height: 25px;
 $label: 18px;
 $label-height: 20px;
-$label-letter: 3px;
 $button: 15px;
 $button-height: 15px;
-$button-letter: 1px;
+
+$size20: 20px;
+$size25: 25px;
+$size35: 35px;
+$size65: 65px;
+$half: 46vw;
+@media (min-width: 1920px) {
+  $half: 883.2px;
+}
+@media (max-width: 1339px) {
+  $h1: 45px;
+  $h1-height: 60px;
+  $a: 15px;
+  $a-height: 20px;
+  $p: 18px;
+  $p-height: 30px;
+  $p-naw-height: 27px;
+  $p1: 16px;
+  $p1-height: 25px;
+  $label: 18px;
+  $label-height: 20px;
+  $button: 15px;
+  $button-height: 15px;
+
+  $size25: 25px;
+  $size35: 35px;
+  $size65: 65px;
+}

@@ -3,13 +3,13 @@ import React, { Component } from 'react'
 class Button extends Component {
   render() {
     return (
-      <div
+      <button
         className={`Button ${this.props.green ? 'Green' : ''}`}
         onClick={this.props.onClick || null}
         style={{ ...this.props.style }}
       >
         {this.props.label}
-      </div>
+      </button>
     )
   }
 }

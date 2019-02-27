@@ -8,14 +8,14 @@
   margin-top: 200px;
   padding: 180px 0 51px;
 
-  &:before {
-    content: '';
+  .Before {
     position: absolute;
     left: 0;
     right: 0;
     top: -89px;
     border-bottom: 90px solid $color;
     border-left: 99.6vw solid transparent;
+    transition: none;
   }
 
   > div {

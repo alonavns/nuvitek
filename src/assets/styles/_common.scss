@@ -1,0 +1,51 @@
+.AppWrapper {
+  * {
+    letter-spacing: $letter;
+  }
+
+  h1 {
+    font-size: $h1;
+    line-height: $h1-height;
+    font-weight: 600;
+  }
+
+  a {
+    font-size: $a;
+    line-height: $a-height;
+    letter-spacing: $letter1-5;
+    text-decoration: none;
+  }
+
+  p {
+    font-size: $p;
+    line-height: $p-height;
+
+    &.naw {
+      line-height: $p-naw-height;
+    }
+  }
+
+  label {
+    font-size: $label;
+    line-height: $label-height;
+    letter-spacing: $letter3;
+  }
+
+  button {
+    color: $white;
+    font-size: $button;
+    font-weight: $bold;
+    // line-height: $button-height;
+    letter-spacing: $letter1;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: $size65 / 2;
+    line-height: $size65;
+
+    cursor: pointer;
+    outline: none;
+    padding: 0 42px;
+  }
+}

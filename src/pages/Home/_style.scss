@@ -2,8 +2,8 @@
   .IntroWrapper {
     background-image: url("assets/images/back_home.svg");
     background-repeat: no-repeat;
-    background-size: 91vw;
-    min-height: 45.5vw;
+    background-size: 91%;
+    min-height: $half;
     position: relative;
     padding: 200px 0;
 
@@ -15,7 +15,7 @@
     }
 
     .Ribbon {
-      color: $color-yellow;
+      color: $yellow;
       font-weight: bold;
       line-height: 15px;
       font-size: 15px;
@@ -435,8 +435,7 @@
     }
   }
 
-  section.About {
-    }
+  section.About {}
 }
 
 .LikeWrapper {
