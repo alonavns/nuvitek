@@ -1,0 +1,82 @@
+.ReplyItem {
+  margin-bottom: 10px;
+  position: relative;
+  background: rgba(237, 235, 251, 0.2);
+  .WriterInfo {
+    overflow: hidden;
+    .ReplyerPhoto{
+      float: left;
+      width: 70px;
+      padding: 10px;
+    }
+    .ReplyInfo {
+      float: left;
+      width: calc(100% - 110px);
+      padding: 10px;
+      .ReplyerName{
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.5px;
+        color: #272950;
+      }
+      .ReplyDate {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.44px;
+      }
+    }
+    .ReplyAgain {
+      float: left;
+      text-align: right;
+      color: #666890;
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .ReplyContent {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    padding: 10px 80px;
+  }
+  &+.ReplyItem {
+    margin-left: 70px;
+    position: relative;
+    &:before {
+      content: '\f148';
+      font-family: FontAwesome;
+      position: absolute;
+      top: 10px;
+      left: -10px;
+      color: #284d82;
+      font-size: 16px;
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+}
+@media (max-width: 1339px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .ReplyItem {
+    .WriterInfo {
+      .ReplyAgain {
+        display: none;
+      }
+    }
+    &+.ReplyItem {
+      margin-left: 10px;
+    }
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+}

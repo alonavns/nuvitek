@@ -1,0 +1,51 @@
+.VehicleItem {
+  max-width: 1060px;
+  padding: 10px 30px 30px;
+  box-shadow: 0px 10px 20px rgba(162, 193, 238, 0.1);
+  margin: 0 auto 50px;
+
+  h4 {
+    color: #112645;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 20px 0 10px;
+  }
+  p {
+    font-size: 16px;
+    color: #284d82;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+  }
+  .ContractWrapper {
+    background: #ffffee;
+    border: 1px solid #dcdd4d;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #1a3b6a;
+    span:first-child{
+      color: #dcdd4d;
+      text-transform: uppercase;
+      float: right;
+      margin-right: 10px;
+    }
+  }
+  .ContactText {
+    font-size: 18px;
+    letter-spacing: 0.38px;
+  }
+  a {
+    color: #284d82;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(40, 87, 130, 0.1);
+    box-shadow: 0 0 0 10px rgba(40, 87, 130, 0.03);
+    line-height: 40px;
+    text-align: center;
+    margin: 30px auto 0;
+  }
+}

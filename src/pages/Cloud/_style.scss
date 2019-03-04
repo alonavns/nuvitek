@@ -1,0 +1,104 @@
+.CloudWrapper {
+  overflow: hidden;
+  .PageHeader {
+    background-image: url("assets/images/back_cloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    min-height: $half;
+    position: relative;
+    padding: 200px 0 100px;
+    color: white;
+    .row {
+      text-align: left;
+      .PageTitle {
+        font-size: 45px;
+        letter-spacing: 0.5px;
+        line-height: 60px;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+      .PageDescription {
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        color: #eefeff;
+        margin-bottom: 40px;
+      }
+      .HeaderOptions {
+        p {
+          font-size: 18px;
+          letter-spacing: 0.45px;
+          line-height: 24px;
+          padding-left: 50px;
+          position: relative;
+          margin-bottom: 20px;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            left: 0;
+            top: 2px;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .CloudServices {
+    margin-top: -100px;
+  }
+  .CloudContents {
+    .row:last-child {
+      .CloudContent {
+        .ContentDescription{
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  .ClientsImage {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+}
+@media (max-width: 1339px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .CloudWrapper {
+    .PageHeader {
+      .row {
+        .PageTitle {
+          text-align: center;
+        }
+        .PageDescription {
+          text-align: center;
+        }
+        .HeaderOptions{
+          width: 240px;
+          margin: auto;
+        }
+      }
+    }
+    .CloudContents {
+      .CloudContent {
+        .ContentDescription{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+}

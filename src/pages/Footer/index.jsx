@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
+import { Container, Row, Col } from 'reactstrap'
 
 import { Button, Input } from "components/_Common";
 import logo from "assets/images/logo_name_black.svg";
@@ -59,41 +60,36 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="FooterWrapper white">
-        <div
-          className="Before"
-          style={{
-            borderLeftWidth:
-              Math.min(window.outerWidth, window.innerWidth, 1920) -
-              (window.navigator.userAgent.includes("Android") ||
-              window.navigator.userAgent.includes("iPhone") ||
-              window.outerWidth > 1920
-                ? 0
-                : 4)
-          }}
-        />
-        <div className="ContactForm">
-          <div className="Form">
-            <div className="Description">
-              <h1>Ready to get started?</h1>
-              <p>
-                Feel free to contact us for any inquiries, if you have any
-                questions about our services, or just say hello.
-              </p>
-            </div>
-            <div className="ContactInfo">
-              <Input required placeholder="Your Name" />
-              <Input required placeholder="Email Address" />
-              <Input placeholder="Phone Number" />
-            </div>
-            <div className="ContactMessage">
-              <Input textarea required placeholder="Your Message" />
-              <Button label="Send Now" />
-            </div>
-          </div>
-        </div>
-        <div className="Links">
-          <div className="Info">
+      <div className="FooterWrapper">
+        <Container className="ContactForm">
+          <Row>
+            <Col xl={{size:12, offset:0}} lg={{size: 6, offset: 3}} md={{size: 8, offset: 2}} sm={{size: 12, offset: 0}}>
+              <div className="Form">
+                <Row>
+                  <Col xl={4} lg={12} md={12} sm={12} className="Description">
+                    <h1>Ready to get started?</h1>
+                    <p>
+                      Feel free to contact us for any inquiries, if you have any
+                      questions about our services, or just say hello.
+                    </p>
+                  </Col>
+                  <Col xl={3} lg={12} md={12} sm={12} className="ContactInfo">
+                    <Input required placeholder="Your Name" />
+                    <Input required placeholder="Email Address" />
+                    <Input placeholder="Phone Number" />
+                  </Col>
+                  <Col xl={5} lg={12} md={12} sm={12} className="ContactMessage">
+                    <Input textarea required placeholder="Your Message" />
+                    <Button label="Send Now" />
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container className="Links">
+          <Row>
+          <Col lg={{size:3, offset:0}} md={{size: 4, offset: 4}} sm={{size: 6, offset: 3}} xs={{size: 8, offset: 2}} className="Info">
             <NavLink className="Logo" to="/">
               <img src={logo} alt="Logo" />
             </NavLink>
@@ -112,27 +108,34 @@ class Footer extends Component {
                 <img src={mapIcon} />
               </div>
             </div>
-          </div>
-          {LINKS.map((col, index) => (
-            <div className={`LinksCol Col-${index + 1}`} key={index}>
-              <div className="Title">{col.label}</div>
-              <ul>
-                {col.links.map((link, cIndex) => (
-                  <li key={cIndex}>
-                    <NavLink to={"/"} activeClassName="Active">
-                      {index === 0 ? <i className="fa fa-angle-right" /> : null}
-                      {link.label}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="CopyRight">
-          <div>© 2014-2018 Nuvitek. All rights reserved.</div>
-          <div>Privacy & Terms</div>
-        </div>
+          </Col>
+          <Col lg={{size:9, offset:0}} md={{size:12, offset: 0}} sm={{size: 6, offset: 3}} xs={{size: 8, offset: 2}}>
+            <Row>
+              {LINKS.map((col, index) => (
+                <Col lg={4} md={4} className={`LinksCol`} key={index}>
+                  <div className="Title">{col.label}</div>
+                  <ul>
+                    {col.links.map((link, cIndex) => (
+                      <li key={cIndex}>
+                        <NavLink to={"/"} activeClassName="Active">
+                          {index === 0 ? <i className="fa fa-angle-right" /> : null}
+                          {link.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </Col>
+              ))}
+            </Row>
+          </Col>
+          </Row>
+        </Container>
+        <Container className="CopyRight">
+          <Row>
+          <Col sm={8} xs={12}>© 2014-2018 Nuvitek. All rights reserved.</Col>
+          <Col sm={4} xs={12}>Privacy & Terms</Col>
+          </Row>
+        </Container>
       </div>
     );
   }

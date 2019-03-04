@@ -10,6 +10,8 @@ $color-light: #A2C1EE;
 $green-grad: linear-gradient(270deg, #43C0C4 0%, #37AAAD 100%);
 $yellow-grad: linear-gradient(270deg, #D5D655 0.28%, #DCDD4D 100%);
 $yellow-ribbon: linear-gradient(90deg, rgba(200, 201, 97, 0.0001) 0%, rgba(220, 221, 77, 0.4) 100%);
+$yellow-20: rgba(220, 221, 77, 0.2);
+$green-20: rgba(55, 170, 173, 0.2);
 
 $letter: .5px;
 $letter1: 1px;
@@ -36,10 +38,15 @@ $size25: 25px;
 $size35: 35px;
 $size65: 65px;
 $half: 46vw;
+
+$size-container: 1280px;
+
 @media (min-width: 1920px) {
+  $size-container: 1280px;
   $half: 883.2px;
 }
 @media (max-width: 1339px) {
+  $size-container: 1140px;
   $h1: 45px;
   $h1-height: 60px;
   $a: 15px;
@@ -57,4 +64,17 @@ $half: 46vw;
   $size25: 25px;
   $size35: 35px;
   $size65: 65px;
+}
+
+@media (max-width: 1199px) {
+  $size-container: 960px;
+}
+@media (max-width: 991px) {
+  $size-container: 720px;
+}
+@media (max-width: 767px) {
+  $size-container: 540px;
+}
+@media (max-width: 575px) {
+  $size-container: 100%;
 }

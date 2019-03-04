@@ -3,18 +3,22 @@
 
   .Head {
     position: relative;
+    background-image: url(assets/images/back_contact.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     .Heading {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
 
-      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 200px 0;
 
       label {
         font-weight: 600;
@@ -27,7 +31,9 @@
         background: rgba(220, 221, 77, 0.1);
         border-radius: 19.5px;
         padding: 5px 18px;
-        display: inline-block;
+        display: block;
+        width: 200px;
+        margin: auto;
       }
 
       h1 {
@@ -47,24 +53,25 @@
         text-align: center;
         letter-spacing: .5px;
         color: #EEFEFF;
-        max-width: 842px;
+        max-width: 840px;
         margin: 0 auto 32px;
-        width: 840px;
       }
 
       .Contacts {
-        display: flex;
-
-        > div {
-          display: flex;
+        .contactus-header-item {
           line-height: 24px;
           font-size: 16px;
           letter-spacing: 1px;
           color: #FFFFFF;
-          margin: 0 20px;
           align-items: center;
+          display: flex;
+          margin-bottom: 15px;
 
-          > div:first-child {
+          &>div {
+            float: left;
+          }
+
+          &>div:first-child {
             background: #DCDD4D;
             border-radius: 8px;
             color: white;
@@ -74,25 +81,24 @@
             font-size: 20px;
             margin-right: 17px;
           }
+          &>div:last-child {
+            width: calc(100% - 70px)
+          }
         }
       }
     }
   }
 
   .ContactForm {
-    background: #FFFFFF;
-    box-shadow: 0 10px 40px rgba(40, 77, 130, 0.05);
-    border-radius: 10px;
-    width: 1280px;
-    padding: 77px 110px 110px;
-    margin: 0 auto;
+    margin: 0px auto 50px;
     position: relative;
-    top: -120px;
+    top: 0px;
 
     > img {
       position: absolute;
       bottom: 0;
       left: 0;
+      width: 100%;
     }
 
     .Buttons {
@@ -102,17 +108,17 @@
     }
 
     .Form {
-      > div {
+      border-radius: 10px;
+      padding: 50px;
+      box-shadow: 0 10px 40px rgba(40, 77, 130, 0.05);
+      background-color: #fff;
+      background-image: url(assets/images/waves.svg);
+      background-size: 100% auto;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      margin-top: -150px;
+      > div > div {
         margin-bottom: 60px;
-      }
-
-      .InputGroup {
-        display: flex;
-        justify-content: space-between;
-
-        > div {
-          width: calc(50% - 20px);
-        }
       }
 
       .FormFooter {
@@ -122,9 +128,54 @@
           letter-spacing: .5px;
 
           color: #284D82;
-          margin: 0;
+          padding-bottom: 20px;
+        }
+        label {
+          font-size: 18px;
+          letter-spacing: 0.5px;
+          line-height: 25px;
+          color: #284d82;
+        }
+        input[type=checkbox] {
+          margin-right: 40px;
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #284d82;
+            border-radius: 5px;
+            top: -7px;
+            left: 0;
+          }
+          &:checked:after{
+            content: '\f00c';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            color: #fff;
+            top: -7px;
+            font-family: FontAwesome;
+          }
         }
       }
+      .Buttons {
+        text-align: center;
+      }
+    }
+  }
+  .OurTeam {
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    
+    h1 {
+      text-align: center;
     }
   }
 }

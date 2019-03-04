@@ -1,47 +1,36 @@
 .HomeWrapper {
   .IntroWrapper {
-    background-image: url("assets/images/back_home.svg");
+    background-image: url("assets/images/bg.png");
     background-repeat: no-repeat;
-    background-size: 91%;
-    min-height: $half;
+    background-size: cover;
+    background-position: bottom left;
     position: relative;
-    padding: 200px 0;
-
-    .Cloud {
-      width: 38%;
-      position: absolute;
-      right: 17.75%;
-      bottom: 13%;
-    }
+    padding: 200px 0 100px;
 
     .Ribbon {
       color: $yellow;
       font-weight: bold;
-      line-height: 15px;
+      line-height: 35px;
       font-size: 15px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      background: $yellow-ribbon;
-
-      border-radius: 0 18px 18px 0;
-      padding: 10px 25px 10px 16.7%;
+      width: 150px;
       display: inline-block;
 
-      img {
-        margin-left: 5px;
-        height: 13px;
-        position: relative;
-        top: 1px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: calc(50vw - 100% + 150px);
+        height: 35px;
+        top: 0;
+        right: calc(100% - 150px);
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        background: $yellow-ribbon;
       }
     }
 
     .Intro {
-      margin-left: 16.7%;
-      width: 60%;
-      max-width: 510px;
-
       h1 {
         font-weight: 600;
         line-height: 60px;
@@ -58,17 +47,10 @@
         color: #EEFEFF;
         margin-bottom: 50px;
       }
-
-      .Button {
-        float: left;
-      }
     }
-  }
-
-  section {
-    max-width: 1280px;
-    margin: 0 auto;
-    text-align: center;
+    img {
+      max-width: 100%;
+    }
   }
 
   > *:not(:first-child) {
@@ -108,12 +90,11 @@
     }
 
     .Buttons {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 100px;
+      text-align: center;
+      margin-bottom: 50px;
 
       .Button {
-        margin: 0 10px;
+        margin: 0 10px 30px;
       }
     }
 
@@ -137,17 +118,29 @@
   .Section1 {
     text-align: center;
     margin-top: 125px;
+    .Cloud {
+      margin: auto;
+      max-width: 370px;
+      margin-bottom: 50px;
+    }
+    .Automation {
+      margin: auto;
+      max-width: 370px;
+      margin-bottom: 50px;
+    }
+    .Security {
+      margin: auto;
+      max-width: 370px;
+      margin-bottom: 50px;
+    }
 
     .ThingsCanDo {
       display: flex;
       justify-content: space-between;
       text-align: left;
-      margin-bottom: 86px;
+      margin-bottom: 0px;
 
       > div {
-        width: 33%;
-        max-width: 400px;
-
         * {
           text-align: left;
         }
@@ -224,8 +217,10 @@
   .EmailForm {
     background-image: url("assets/images/back_float.svg");
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    padding: 268px 0;
+    padding: 200px 0;
 
     .SliddingForm {
       width: 80%;
@@ -259,59 +254,59 @@
         text-align: right;
         font-size: 20px;
         letter-spacing: 1.33333px;
+        padding-right: 30px;
+        color: #fff;
       }
     }
 
     .Info {
-      display: flex;
-      justify-content: center;
+      background: linear-gradient(180deg, rgba(65, 187, 190, 0.0001) 0%, #44C7CA 100%);
+      border-radius: 5px;
+      padding: 40px 0;
+      width: 100%;
+      font-weight: 600;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: .5px;
+      color: #FFFFFF;
 
-      > div {
-        background: linear-gradient(180deg, rgba(65, 187, 190, 0.0001) 0%, #44C7CA 100%);
-        border-radius: 5px;
-        padding: 40px 0;
-        width: 25%;
-        max-width: 290px;
-        margin: 20px;
-        font-weight: 600;
-        font-size: 36px;
+      > span {
+        font-size: 20px;
         text-align: center;
         letter-spacing: .5px;
         color: #FFFFFF;
-
-        > span {
-          font-size: 20px;
-          text-align: center;
-          letter-spacing: .5px;
-          color: #FFFFFF;
-          line-height: normal;
-          font-weight: normal;
-          display: block;
-          margin-top: 10px;
-        }
+        line-height: normal;
+        font-weight: normal;
+        display: block;
+        margin-top: 10px;
+        white-space: nowrap;
       }
     }
   }
 
-  section.Blog {
+  .Blog {
     margin-top: 100px;
+    text-align: center;
 
     .Blogs {
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
       margin-bottom: 80px;
 
       .Main {
         position: relative;
-        display: flex;
-        max-width: 840px;
+        cursor: pointer;
 
         .Back {
+          width: 100%;
+          height: 530px;
+          background-size: cover;
+          background-position: center;
+          background-image: url(assets/images/home/blog.png);
           position: relative;
           border-radius: 10px;
           overflow: hidden;
           display: inline-grid;
+          float: left;
+          margin-bottom: 30px;
 
           img {
             width: 100%;
@@ -327,16 +322,19 @@
             background: linear-gradient(180deg, rgba(39, 41, 80, 0.0110111) 67.46%, #272950 100%);
           }
         }
+        &:hover .Back:after {
+          background: linear-gradient(180deg, rgba(67, 192, 196, 0.7) 0%, rgba(55, 170, 173, 0.8) 100%);
+        }
 
         .Info {
           position: absolute;
           bottom: 0;
-          left: 0;
+          left: 15px;
+          right: 15px;
           padding: 45px 42px;
-          width: 100%;
 
           .UserInfo {
-            display: flex;
+            display: none;
             align-items: center;
 
             img {
@@ -379,6 +377,7 @@
             width: 100%;
             opacity: .5;
             margin: 19px 0;
+            display: none;
           }
 
           h1 {
@@ -395,17 +394,28 @@
       }
 
       .Examples {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
         .Example {
           position: relative;
+          margin-bottom: 30px;
+          cursor: pointer;
 
-          img {
-            width: 400px;
-            border-radius: 5px;
-            display: block;
+          .Image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 10px;
+          }
+          &:first-child {
+            .Image{
+              background-image: url(assets/images/home/blog_example1.png);
+            }
+          }
+          &:last-child {
+            .Image{
+              background-image: url(assets/images/home/blog_example2.png);
+            }
           }
 
           .Image:after {
@@ -415,7 +425,11 @@
             right: 0;
             top: 0;
             bottom: 0;
+            border-radius: 10px;
             background: linear-gradient(360deg, rgba(39, 41, 80, 0.8) 0%, rgba(39, 41, 80, 0.0001) 50%);
+          }
+          &:hover .Image:after {
+            background: linear-gradient(180deg, rgba(67, 192, 196, 0.7) 0%, rgba(55, 170, 173, 0.8) 100%);
           }
 
           .Title {
@@ -427,21 +441,82 @@
             color: #FFFFFF;
             position: absolute;
             bottom: 0;
-            left: 0;
-            margin: 21px 18px;
+            left: 15px;
+            right: 15px;
+            padding: 20px;
           }
         }
       }
     }
   }
-
-  section.About {}
+  .TestimoialSection {
+    margin-bottom: 50px;
+    h2{
+      margin: 20px 0;
+    }
+    p {
+      margin: 30px 0;
+      text-align: left;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+    .row {
+      div:last-child {
+        .Button {
+          display: none;
+        }
+      }
+    }
+  }
+  .Opportunities {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    h2{
+      margin: 20px 0;
+    }
+    p {
+      margin: 30px 0;
+      text-align: left;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .row {
+      div:last-child {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+  .About {
+    .row>div {
+      position: relative;
+      padding-bottom: 0px;
+      margin-bottom: 30px;
+      a {
+        display: block;
+        position: absolute;
+        left: 15px;
+        bottom: 20px;
+      }
+    }
+    h2 {
+      margin: 30px 0;
+    }
+    p {
+      text-align: left;
+      margin-bottom: 70px;
+    }
+  }
 }
 
 .LikeWrapper {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 25px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -457,4 +532,129 @@
   &.Liked {
     background: #DCDD4D;
   }
+}
+
+@media (min-width: 1920px) {
+}
+@media (max-width: 1339px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .HomeWrapper {
+    .TestimoialSection {
+      .ColorText {
+        margin: auto;
+        display: block;
+        width: 140px;
+      }
+      h2 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      .row {
+        div:first-child {
+          .Button {
+            display: none;
+          }
+        }
+        div:last-child {
+          .Button {
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+    }
+    .Opportunities {
+      .ColorText {
+        margin: auto;
+        display: block;
+        width: 200px;
+      }
+      h2 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      .row {
+        div:first-child {
+          img {
+            display: none;
+          }
+        }
+        div:last-child {
+          img {
+            display: block;
+            margin: auto;
+          }
+          .Button {
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+    }
+    .IntroWrapper {
+      padding: 200px 0 100px;
+      text-align: center;
+      background-position: top center;
+
+      .Ribbon {
+        width: 180px;
+        margin: auto;
+        display: block;
+        background: $yellow-20;
+        border-radius: 18px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .HomeWrapper {
+    .Blog {
+      .Blogs {
+        .Main {
+          .Back {
+            height: 250px;
+          }
+          .Info {
+            padding: 20px;
+            bottom: 30px;
+            h1 {
+              font-size: 24px;
+              line-height: 32px;
+            }
+          }
+        }
+      }
+    }
+    .EmailForm {
+      .SliddingForm {
+        padding-top: 100px;
+        input.Input {
+          height: 85px;
+          &.Valid {
+            width: 100%;
+          }
+        }
+        .Button {
+          text-align: center;
+          padding-right: 0;
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
 }

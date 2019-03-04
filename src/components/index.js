@@ -1,2 +1,5 @@
 export * from './_Common';
-export { default as Home } from './Home';
+export * from './About';
+export * from './Cloud';
+export * from './Blog';
+export * from './Home';

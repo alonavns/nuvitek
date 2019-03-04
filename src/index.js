@@ -5,6 +5,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom'
 import App from './App'
 
 import 'normalize.css/normalize.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.scss'
 
 ReactDOM.render(

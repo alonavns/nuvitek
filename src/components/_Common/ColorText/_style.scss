@@ -1,0 +1,14 @@
+.ColorText {
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: $yellow;
+  background: $yellow-20;
+
+  &.Green {
+    color: $green;
+    background: $green-20;
+  }
+}

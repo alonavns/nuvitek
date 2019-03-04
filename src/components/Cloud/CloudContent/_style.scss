@@ -1,0 +1,27 @@
+.CloudContent {
+  padding: 50px 0 0;
+  img {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+  }
+  .ContentTitle {
+    color: #112645;
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .ContentDescription {
+    color: #284d82;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    border-bottom: 1px solid #a2c1ee;
+    padding-bottom: 20px;
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}

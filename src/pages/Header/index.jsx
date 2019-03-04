@@ -10,38 +10,134 @@ const LINKS = [
     url: "/home"
   },
   {
-    label: "Services",
-    url: "/services"
-  },
-  {
     label: "About",
-    url: "/about"
+    // url: "/about"
+    children: [
+      {
+        label: "Company",
+        url: "/about-us"
+      },
+      {
+        label: "Success Stories",
+        url: "/stories"
+      },
+      {
+        label: "Contract Vehicles",
+        url: "/vehicles"
+      },
+    ]
   },
   {
-    label: "News",
-    url: "/news"
+    label: "Services",
+    // url: "/services"
+    children: [
+      {
+        label: "Cloud",
+        url: "/cloud"
+      },
+      {
+        label: "Automation",
+        url: "/automation"
+      },
+      {
+        label: "Transformation",
+        url: "/transformation"
+      },
+    ]
   },
   {
-    label: "Team",
-    url: "/team"
+    label: "Careers",
+    url: "/careers"
+  },
+  {
+    label: "Blog",
+    url: "/blog"
   }
 ];
 
 class Header extends Component {
+  state = {
+    mobileNavState: false,
+    activedSubmenu: -1,
+  }
+  handleMobileNavButton = () => {
+    this.setState({ mobileNavState: !this.state.mobileNavState })
+  }
+  handleMobileSubMenu = (index) => {
+    this.setState({ activedSubmenu: index });
+  }
+  handleContactUs = (e) => {
+    this.props.history.push('/contact-us');
+  }
   render() {
     return (
       <div className="HeaderWrapper">
         <NavLink className="Logo" to="/">
           <img src={logo} alt="Logo" />
         </NavLink>
-        <div className="NavWrapper white">
-          {LINKS.map((link, index) => (
-            <NavLink key={index} to={link.url} activeClassName="Active">
-              {link.label}
-            </NavLink>
-          ))}
+        <div className="NavBarDesktop">
+          <div className="NavWrapper white">
+            {LINKS.map((link, index) => {
+              if (link.children) {
+                return (
+                  <span key={index}>
+                    {link.label} <i className={'fa fa-angle-down'}></i>
+                    <ul>
+                    {
+                      link.children.map((clink, cindex) => (
+                        <li key={cindex}>
+                          <NavLink to={clink.url}>{clink.label}</NavLink>
+                        </li>
+                      ))
+                    }
+                    </ul>
+                  </span>
+                )
+              } else {
+                return (
+                  <NavLink key={index} to={link.url} activeClassName="Active">
+                    {link.label}
+                  </NavLink>
+                )
+              }
+            })}
+          </div>
+          <Button label="Contact Us" onClick={this.handleContactUs} />
         </div>
-        <Button label="Contact Us" />
+        <div className="NavBarMobile">
+          <div className={"NavBarMobileButton" + (this.state.mobileNavState ? ' opened' : '')} onClick={this.handleMobileNavButton}></div>
+          <div className={"NavBarMobileMenus" + (this.state.mobileNavState ? ' opened' : '')}>
+            <ul className="NavWrapper">
+              {LINKS.map((link, index) => {
+                if (link.children) {
+                  return (
+                    <li key={index} className={this.state.activedSubmenu == index ? 'actived' : ''}>
+                      <span onClick={e => {this.handleMobileSubMenu(index)}}>{link.label} <i className={'fa fa-angle-' + (this.state.activedSubmenu == index ? 'down' : 'right')}></i></span>
+                      <ul>
+                      {
+                        link.children.map((clink, cindex) => (
+                          <li key={cindex} onClick={this.handleMobileNavButton}>
+                            <NavLink to={clink.url}>{clink.label}</NavLink>
+                          </li>
+                        ))
+                      }
+                      </ul>
+                    </li>
+                  )
+                } else {
+                  return (
+                    <li key={index} onClick={this.handleMobileNavButton}>
+                      <NavLink to={link.url} activeClassName="Active">
+                        {link.label}
+                      </NavLink>
+                    </li>
+                  )
+                }
+              })}
+            </ul>
+            <Button label="Contact Us" onClick={this.handleMobileNavButton} />
+          </div>
+        </div>
       </div>
     );
   }

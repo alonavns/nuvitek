@@ -1,0 +1,75 @@
+.CareerItem {
+  max-width: 1060px;
+  padding: 0;
+  margin: 0 auto 50px;
+  background: #f5f8fd;
+
+  .CareerBox {
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(162, 193, 238, 0.3);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    span {
+      color: #48b3b7;
+      text-transform: uppercase;
+      font-size: 15px;
+      &.CareerTime {
+        color: #284d82;
+        font-size: 18px;
+        line-height: 54px;
+        margin-right: 40px;
+        &+i{
+          float: right;
+          width: 40px;
+          height: 40px;
+          display: block;
+          background: rgba(40, 87, 130, 0.1);
+          box-shadow: 0 0 0 10px rgba(40, 87, 130, 0.03);
+          border-radius: 50%;
+          line-height: 40px;
+          text-align: center;
+          margin-top: 8px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .CareerName {
+      color: #112645;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+    }
+  }
+  .CareerDetails {
+    padding: 30px;
+    p {
+      color: #284d82;
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+    a {
+      color: #112645;
+      font-size: 16px;
+      line-height: 40px;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      padding-left: 30px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 13px;
+        height: 13px;
+        border: 2px solid #fff;
+        background: #48b3b7;
+        box-shadow: 0 2px 4px rgba(72, 179, 183, 0.3);
+        border-radius: 50%;
+      }
+    }
+  }
+}

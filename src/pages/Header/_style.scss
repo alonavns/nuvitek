@@ -4,27 +4,207 @@
   right: 0;
   top: 30px;
   display: flex;
-  width: 81.4%;
+  width: 1280px;
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   z-index: 1;
 
-  .NavWrapper {
-    a {
-      text-transform: uppercase;
-      position: relative;
-      margin: $size25;
+  .Logo {
+    z-index: 1;
+  }
 
-      &.Active:after {
+  .NavBarDesktop {
+    align-items: center;
+    display: flex;
+    .NavWrapper {
+      a {
+        text-transform: uppercase;
+        position: relative;
+        margin: $size25;
+
+        &:hover {
+          text-decoration: none;
+        }
+  
+        &.Active:after {
+          content: '';
+          position: absolute;
+          width: $size20;
+          height: 2px;
+          background: $white;
+          bottom: -5px;
+          left: calc(50% - 10px);
+        }
+      }
+      span {
+        margin: $size25;
+        text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
+  
+        ul {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          display: none;
+          padding: 10px 0px;
+          margin: 0;
+          width: 200px;
+  
+          li {
+            list-style: none;
+            padding: 0;
+            line-height: 40px;
+            background: rgba(50, 160, 170, 0.5);
+            a {
+              margin: 10px;
+            }
+          }
+        }
+        &:hover ul{
+          display: block;
+        }
+      }
+    }
+  }
+  .NavBarMobile {
+    display: none;
+    .NavBarMobileMenus{
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      background: #112645;
+      color: #fff;
+      padding-bottom: 30px;
+      text-align: center;
+      &.opened {
+        display: block;
+      }
+      .NavWrapper {
+        padding: 100px 30px 30px;
+        margin: 0;
+        text-align: left;
+        li {
+          margin: 0;
+          padding: 10px 35px;
+          list-style: none;
+          border-bottom: 1px solid #1a3b6a;
+          text-transform: uppercase;
+          position: relative;
+          cursor: pointer;
+
+          &:first-child{
+            border-top: 1px solid #1a3b6a;
+          }
+    
+          a {
+            text-transform: uppercase;
+            position: relative;
+            color: #fff;
+            display: block;
+      
+            // &.Active:after {
+            //   content: '';
+            //   position: absolute;
+            //   width: $size20;
+            //   height: 2px;
+            //   background: $white;
+            //   bottom: -5px;
+            //   left: calc(50% - 10px);
+            // }
+          }
+          span {
+            display: block;
+            i {
+              position: absolute;
+              right: 30px;
+              top: 13px;
+            }
+          }
+          ul {
+            display: none;
+            padding: 10px 0px;
+            margin: 0;
+    
+            li {
+              list-style: none;
+              padding: 10px;
+              border: 0 !important;
+            }
+          }
+          &.actived ul{
+            display: block;
+          }
+        }
+      }
+    }
+    .NavBarMobileButton {
+      width: 25px;
+      height: 16px;
+      background: transparent;
+      border-top: 2px solid #fff;
+      position: relative;
+      &:before {
         content: '';
         position: absolute;
-        width: $size20;
+        width: 13px;
         height: 2px;
-        background: $white;
-        bottom: -5px;
-        left: calc(50% - 10px);
+        right: 0;
+        top: 5px;
+        background: #fff;
       }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 19px;
+        height: 2px;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+      }
+      &.opened {
+        border-top: 0;
+        height: 25px;
+        z-index: 1;
+        &:before {
+          width: 25px;
+          top: 12px;
+          transform: rotateZ(45deg);
+        }
+        &:after {
+          width: 25px;
+          bottom: 11px;
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1339px) {
+  .HeaderWrapper {
+    width: 1140px;
+  }
+}
+@media (max-width: 1199px) {
+  .HeaderWrapper {
+    width: 960px;
+  }
+}
+@media (max-width: 991px) {
+  .HeaderWrapper {
+    width: 100%;
+    top: 0;
+    padding: 30px;
+
+    .NavBarDesktop {
+      display: none;
+    }
+    .NavBarMobile {
+      display: block;
     }
   }
 }

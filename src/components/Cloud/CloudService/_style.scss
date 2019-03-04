@@ -1,0 +1,32 @@
+.CloudService {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 13px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: all 0s;
+  img {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+  }
+  .service-label {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    white-space: nowrap;
+    background: #fff;
+    line-height: 22px;
+    border-radius: 11px;
+    padding: 0 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 13px 18px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    color: #284d82;
+  }
+  &:hover .service-label {
+    display: block;
+  }
+}

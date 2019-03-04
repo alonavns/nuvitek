@@ -1,0 +1,29 @@
+.ClientBlock {
+  padding: 0 30px 30px;
+  box-shadow: 0px 10px 20px rgba(162, 193, 238, 0.1);
+  margin-bottom: 50px;
+
+  .ClientIcon {
+    height: 50px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.Icon-user {
+      background-image: url("assets/images/home/about/icon-user.svg");
+    }
+    &.Icon-pair {
+      background-image: url("assets/images/home/about/icon-pair.svg");
+    }
+    &.Icon-best {
+      background-image: url("assets/images/home/about/icon-best.svg");
+    }
+    &.Icon-measure {
+      background-image: url("assets/images/home/about/icon-measure.svg");
+    }
+  }
+  h2{
+    text-align: center;
+    font-size: 20px;
+  }
+}

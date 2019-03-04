@@ -5,24 +5,8 @@
   font-size: 16px;
   letter-spacing: 0.5px;
   position: relative;
-  margin-top: 200px;
-  padding: 180px 0 51px;
-
-  .Before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -89px;
-    border-bottom: 90px solid $color;
-    border-left: 99.6vw solid transparent;
-    transition: none;
-  }
-
-  > div {
-    width: 50%;
-    min-width: 960px;
-    margin: 0 auto;
-  }
+  margin-top: 150px;
+  padding: 180px 0 30px;
 
   a,
   ul li {
@@ -34,11 +18,10 @@
   }
 
   .Links {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 87px;
 
     .Info {
+      margin-bottom: 50px;
       .Logo {
         margin-bottom: 27px;
         display: block;
@@ -68,27 +51,22 @@
           margin-left: 30px;
         }
       }
+
+      &+.LinksCol ul{
+        padding-left: 0 !important;
+        i {
+          margin-right: 5px;
+        }
+        li:before{
+          display: none;
+        }
+      }
     }
 
     .LinksCol {
+      margin-bottom: 50px;
       ul {
         margin: 0;
-
-        li:not(:last-child) {
-          margin-bottom: 15px;
-        }
-      }
-
-      &.Col-1 ul {
-        padding-left: 0;
-        list-style: none;
-
-        li i {
-          margin-right: 4px;
-        }
-      }
-
-      &:not(.Col-1) ul {
         padding-left: 10px;
         list-style: none;
 
@@ -106,6 +84,10 @@
             top: 8px;
           }
         }
+
+        li:not(:last-child) {
+          margin-bottom: 15px;
+        }
       }
 
       .Title {
@@ -121,35 +103,37 @@
   }
 
   .CopyRight {
-    display: flex;
     border-top: 1px solid #1A3B6A;
     padding-top: 22px;
-    justify-content: space-between;
     font-size: 14px;
     letter-spacing: 0.5px;
     color: rgba(162, 193, 238, 0.8);
+    .row {
+      div:first-child {
+        text-align: left;
+      }
+      div:last-child {
+        text-align: right;
+      }
+    }
   }
 
   .ContactForm {
     margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: -190px;
+    margin-top: -290px;
 
     .Form {
       padding: 54px 110px 54px 70px;
       max-width: 1280px;
-      margin: 0 auto;
+      margin: 0 auto 50px;
       display: flex;
       justify-content: space-between;
       background-image: url("assets/images/back_modal.svg");
       background-repeat: no-repeat;
       background-position: top;
-      background-size: contain;
+      background-size: 100% 100%;
 
       .Description {
-        width: 30%;
         text-align: left;
 
         h1 {
@@ -170,7 +154,7 @@
       }
 
       .ContactInfo {
-        width: 26.3%;
+        margin-bottom: 15px;
 
         > div:not(:last-child) {
           margin-bottom: 15px;
@@ -178,8 +162,6 @@
       }
 
       .ContactMessage {
-        width: 36.4%;
-
         > div:not(:last-child) {
           margin-bottom: 22px;
         }
@@ -191,6 +173,48 @@
         .Button {
           line-height: 50px;
           float: right;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1340px) {
+  .container {
+    max-width: 1280px !important;
+  }
+}
+@media (max-width: 1339px) {
+}
+@media (max-width: 1199px) {
+  .FooterWrapper{
+    .ContactForm {
+      .Form {
+        padding: 54px 70px;
+        background-image: url("assets/images/back_modal_2.png");
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+  .FooterWrapper{
+    .ContactForm {
+      .Form {
+        padding: 40px 50px;
+        margin-bottom: 50px;
+      }
+    }
+    .CopyRight {
+      .row {
+        div:first-child {
+          text-align: center;
+        }
+        div:last-child {
+          text-align: center;
         }
       }
     }
