@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from 'reactstrap'
+import { withRouter } from "react-router-dom";
 
 import { Button, Input, ColorText } from "components/_Common";
 import { Testimoials } from "components/Home";
@@ -25,6 +26,9 @@ class Home extends Component {
       this.setState({ [key]: e.target.value });
     };
   }
+  handleClickButton = (link) => {
+    this.props.history.push(link);
+  }
 
   render() {
     const shippingEmail = this.state["shipping.email"];
@@ -45,7 +49,7 @@ class Home extends Component {
                     Simple, flexible, automated and secure - that's the Nuvitek way.
                     What service are you looking for?
                   </p>
-                  <Button label="Cloud Migrations" />
+                  <Button label="Cloud Migrations" onClick={e => { this.handleClickButton('/cloud') }} />
                 </div>
               </Col>
               <Col lg={6} md={12}>
@@ -123,8 +127,8 @@ class Home extends Component {
           </Row>
           <Row>
             <Col lg={12} className="Buttons">
-              <Button label="CONTACT US NOW" />
-              <Button label="VIEW JOB AOFFERS" green />
+              <Button label="CONTACT US NOW" onClick={e => { this.handleClickButton('/contact-us') }} />
+              <Button label="VIEW JOB AOFFERS" green onClick={e => { this.handleClickButton('/stories') }} />
             </Col>
           </Row>
         </Container>
@@ -236,8 +240,8 @@ class Home extends Component {
             <Row>
               <Col lg={12}>
                 <div className="Buttons">
-                  <Button label="Contact Us" />
-                  <Button label="See All Blog" green />
+                  <Button label="Contact Us" onClick={e => { this.handleClickButton('/contact-us') }} />
+                  <Button label="See All Blog" green onClick={e => { this.handleClickButton('/blog') }} />
                 </div>
               </Col>
             </Row>
@@ -254,11 +258,11 @@ class Home extends Component {
                 <p>
                   Eu quo nemore prompta elaboraret. Vix inani doming definitiones ei, ne fuisset ullamcorper vel. Diam debitis ne vis, quot fabulas per te.
                 </p>
-                <Button label="SEE OUR CLIENTS" />
+                <Button label="SEE OUR CLIENTS" onClick={e => { this.handleClickButton('/about-us') }} />
               </Col>
               <Col xl={9} lg={8} md={12}>
                 <Testimoials />
-                <Button label="SEE OUR CLIENTS" />
+                <Button label="SEE OUR CLIENTS" onClick={e => { this.handleClickButton('/about-us') }} />
               </Col>
             </Row>
           </Container>
@@ -274,7 +278,7 @@ class Home extends Component {
                 <h2>Work with us</h2>
                 <p>We don't just align our business to meet customer needs, at Nuvitek, we align our company to meet the needs of our employees.</p>
                 <img src={jobsImg} />
-                <Button label="SEE ALL OFFERS" />
+                <Button label="SEE ALL OFFERS" onClick={e => { this.handleClickButton('/about-us') }} />
               </Col>
             </Row>
           </Container>
@@ -319,13 +323,22 @@ class Home extends Component {
 }
 
 class Like extends Component {
+  state = {
+    liked: false,
+  }
+  componentDidMount() {
+    this.setState({liked: !!this.props.liked});
+  }
+  handleClick = (e) => {
+    this.setState({liked: !this.state.liked});
+  }
   render() {
     return (
-      <div className={`LikeWrapper ${this.props.liked ? "Liked" : ""}`}>
-        <i className={`fa fa-heart${this.props.liked ? "" : "-o"}`} />
+      <div className={`LikeWrapper ${this.state.liked ? "Liked" : ""}`} onClick={this.handleClick}>
+        <i className={`fa fa-heart${this.state.liked ? "" : "-o"}`} />
       </div>
     );
   }
 }
 
-export default Home;
+export default withRouter(Home);

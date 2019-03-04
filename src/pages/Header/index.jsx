@@ -37,11 +37,11 @@ const LINKS = [
       },
       {
         label: "Automation",
-        url: "/automation"
+        url: "/cloud"
       },
       {
         label: "Transformation",
-        url: "/transformation"
+        url: "/cloud"
       },
     ]
   },

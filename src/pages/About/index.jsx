@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import { withRouter } from "react-router-dom";
 
 import { Button, ColorText, Input, OurTeam } from 'components/_Common'
 import { CloudServices } from 'components/Cloud'
@@ -8,6 +9,9 @@ import { ClientBlock } from 'components/About'
 import sreviceAws from 'assets/images/services/aws-logo.png'
 
 class About extends Component {
+  handleClickButton = (link) => {
+    this.props.history.push(link);
+  }
   render() {
     const partners = [
       { image: sreviceAws, label: 'AWS - laaS, PaaS', link: 'https://aws.com', pos: { left: 10, top: 20}, radius: 94},
@@ -46,7 +50,7 @@ class About extends Component {
               </Col>
             </Row>
           </Container>
-          <Button label="Contact Us Now"></Button>
+          <Button label="Contact Us Now" onClick={e => { this.handleClickButton('/contact-us') }}></Button>
         </div>
         <div className="OurPartners">
           <Container>
@@ -112,4 +116,4 @@ class About extends Component {
   }
 }
 
-export default About
+export default withRouter(About)
