@@ -128,7 +128,7 @@ class Home extends Component {
           <Row>
             <Col lg={12} className="Buttons">
               <Button label="CONTACT US NOW" onClick={e => { this.handleClickButton('/contact-us') }} />
-              <Button label="VIEW JOB AOFFERS" green onClick={e => { this.handleClickButton('/stories') }} />
+              <Button label="VIEW JOB OFFERS" green onClick={e => { this.handleClickButton('/stories') }} />
             </Col>
           </Row>
         </Container>
