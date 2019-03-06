@@ -32,6 +32,8 @@ class App extends Component {
               <Route exact path='/vehicles' render={() => <Vehicles />} />
               <Route exact path='/careers' render={() => <Careers />} />
               <Route exact path='/cloud' render={() => <Cloud />} />
+              <Route exact path='/automation' render={() => <Cloud />} />
+              <Route exact path='/transformation' render={() => <Cloud />} />
               <Route path='/contact-us'
                 render={({ match }) => <Contact match={match} />}
               />

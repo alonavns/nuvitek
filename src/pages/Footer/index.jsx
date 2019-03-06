@@ -10,30 +10,30 @@ const LINKS = [
   {
     label: "Quick links",
     links: [
-      { label: "Work With Us" },
-      { label: "Our Experience" },
-      { label: "Contract Vehicles" },
-      { label: "Partnerships" },
-      { label: "Customers" }
+      { label: "Work With Us", href: '/work-with-us' },
+      { label: "Our Experience", href: '/our-experience' },
+      { label: "Contract Vehicles", href: '/contract-vehicles' },
+      { label: "Partnerships", href: '/partnerships' },
+      { label: "Customers", href: '/customers' }
     ]
   },
   {
     label: "Our Services",
     links: [
-      { label: "Our Services" },
-      { label: "Cloud" },
-      { label: "Automation" },
-      { label: "Transformation" }
+      { label: "Our Services", href: '/our-services' },
+      { label: "Cloud", href: '/cloud' },
+      { label: "Automation", href: '/automation' },
+      { label: "Transformation", href: '/transformation' }
     ]
   },
   {
     label: "Job offers",
     links: [
-      { label: "Cloud Solutions Architect" },
-      { label: "Virtualization Engineer" },
-      { label: "Network Engineer" },
-      { label: "Altiris Engineer" },
-      { label: "Help Desk Engineer" }
+      { label: "Cloud Solutions Architect", href: '/cloud-solutions-architect' },
+      { label: "Virtualization Engineer", href: '/virtualization-engineer' },
+      { label: "Network Engineer", href: '/network-engineer' },
+      { label: "Altiris Engineer", href: '/altiris-engineer' },
+      { label: "Help Desk Engineer", href: '/help-desk-engineer' }
     ]
   }
 ];
@@ -94,18 +94,24 @@ class Footer extends Component {
               <img src={logo} alt="Logo" />
             </NavLink>
             <div className="Phone">
+              <a href="tel:+16128886884">
               <i className="fa fa-phone" />
               612-888-6884
+              </a>
             </div>
             <div className="Email">
+              <a href="mailto:getintouch@nuvitek.com">
               <i className="fa fa-envelope" />
               getintouch@nuvitek.com
+              </a>
             </div>
             <div className="Map">
               <i className="fa fa-map-marker" />
               <div className="MapInput">
+                <NavLink to="/map">
                 View Map
                 <img src={mapIcon} />
+                </NavLink>
               </div>
             </div>
           </Col>
@@ -117,7 +123,7 @@ class Footer extends Component {
                   <ul>
                     {col.links.map((link, cIndex) => (
                       <li key={cIndex}>
-                        <NavLink to={"/"} activeClassName="Active">
+                        <NavLink to={link.href} activeClassName="Active">
                           {index === 0 ? <i className="fa fa-angle-right" /> : null}
                           {link.label}
                         </NavLink>
@@ -133,7 +139,7 @@ class Footer extends Component {
         <Container className="CopyRight">
           <Row>
           <Col sm={8} xs={12}>© 2014-2018 Nuvitek. All rights reserved.</Col>
-          <Col sm={4} xs={12}>Privacy & Terms</Col>
+          <Col sm={4} xs={12}><NavLink to="/privacy">Privacy & Terms</NavLink></Col>
           </Row>
         </Container>
       </div>
