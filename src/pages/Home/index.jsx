@@ -49,7 +49,7 @@ class Home extends Component {
                     Simple, flexible, automated and secure - that's the Nuvitek way.
                     What service are you looking for?
                   </p>
-                  <Button label="Cloud Migrations" onClick={e => { this.handleClickButton('/cloud') }} />
+                  <Button label="Cloud Migrations" style={{ textTransform: 'capitalize' }} onClick={e => { this.handleClickButton('/cloud') }} />
                 </div>
               </Col>
               <Col lg={6} md={12}>
