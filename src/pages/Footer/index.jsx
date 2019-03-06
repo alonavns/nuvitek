@@ -206,7 +206,7 @@ class Footer extends Component {
         </Container>
         <Container className="CopyRight">
           <Row>
-          <Col sm={8} xs={12}>© 2014-2018 Nuvitek. All rights reserved.</Col>
+          <Col sm={8} xs={12}>© 2014-2019 Nuvitek. All rights reserved.</Col>
           <Col sm={4} xs={12}><NavLink to="/privacy">Privacy & Terms</NavLink></Col>
           </Row>
         </Container>
