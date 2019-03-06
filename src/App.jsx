@@ -38,9 +38,8 @@ class App extends Component {
                 render={({ match }) => <Contact match={match} />}
               />
               <Route exact path='/services' render={() => <About />} />
-              <Route exact path='/news' render={() => <About />} />
-              <Route exact path='/blog' render={() => <Blog />} />
-              <Route exact path='/blog/:id' render={() => <Article />} />
+              <Route exact path='/news' render={() => <Blog />} />
+              <Route exact path='/news/:id' render={() => <Article />} />
               <Redirect exact path='/' to={'home'} />
               <Route exact path='*' render={() => <h1 style={{background: '#3ab0b3', padding: 200, textAlign: 'center', color: 'white', fontSize: 100, borderRadius: '0 0 30% 30%', boxShadow: '0 0 20px rgba(0, 0, 0, 0.4)'}}>Page Not Found!</h1>} />
             </Switch>

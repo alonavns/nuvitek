@@ -50,8 +50,8 @@ const LINKS = [
     url: "/careers"
   },
   {
-    label: "Blog",
-    url: "/blog"
+    label: "News",
+    url: "/news"
   }
 ];
 
