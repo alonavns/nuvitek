@@ -437,6 +437,7 @@
             line-height: 32px;
             font-size: 24px;
             letter-spacing: .5px;
+            text-align: left;
 
             color: #FFFFFF;
             position: absolute;
@@ -631,8 +632,12 @@
             h1 {
               font-size: 24px;
               line-height: 32px;
+              text-align: center;
             }
           }
+        }
+        .Examples .Example .Title {
+          text-align: center;
         }
       }
     }
