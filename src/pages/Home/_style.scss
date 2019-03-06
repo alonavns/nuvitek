@@ -493,15 +493,16 @@
     }
   }
   .About {
+    border-top: 1px solid rgba(102, 104, 144, 0.2);
+    border-bottom: 1px solid rgba(102, 104, 144, 0.2);
     .row>div {
       position: relative;
-      padding-bottom: 0px;
-      margin-bottom: 30px;
+      padding: 50px;
+      &:first-child {
+        border-right: 1px solid rgba(102, 104, 144, 0.2);
+      }
       a {
         display: block;
-        position: absolute;
-        left: 15px;
-        bottom: 20px;
         color: #48B3B7;
         font-weight: bold;
       }
@@ -615,6 +616,13 @@
 
         &:before {
           display: none;
+        }
+      }
+    }
+    .About {
+      .row>div {
+        &:first-child {
+          border-right: 0;
         }
       }
     }
