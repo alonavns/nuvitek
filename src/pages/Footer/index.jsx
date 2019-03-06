@@ -41,7 +41,21 @@ const LINKS = [
 class Footer extends Component {
   constructor(props) {
     super(props);
-    this.state = { width: 0, height: 0 };
+    this.state = {
+      width: 0,
+      height: 0,
+      form: {
+        name: '',
+        address: '',
+        phone: '',
+        message: '',
+      },
+      status: {
+        name: true,
+        address: true,
+      },
+      sentStatus: false,
+    };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -56,6 +70,60 @@ class Footer extends Component {
 
   updateWindowDimensions() {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+  checkStatus = (e) => {
+    var form = this.state.form;
+    var status = this.state.status;
+    if (form.name.trim() == '') {
+      status.name = false;
+    } else {
+      status.name = true;
+    }
+    if (form.address.trim() == '') {
+      status.address = false;
+    } else {
+      status.address = true;
+    }
+    this.setState({status});
+    return status.name && status.address;
+  }
+  handleChangeName = (e) => {
+    var form = this.state.form;
+    form.name = e.target.value;
+    this.setState({form});
+    this.checkStatus();
+  }
+  handleChangeAddress = (e) => {
+    var form = this.state.form;
+    form.address = e.target.value;
+    this.setState({form});
+    this.checkStatus();
+  }
+  handleChangePhone = (e) => {
+    var form = this.state.form;
+    form.phone = e.target.value;
+    this.setState({form});
+  }
+  handleChangeMessage = (e) => {
+    var form = this.state.form;
+    form.message = e.target.value;
+    this.setState({form});
+  }
+  handleSendNow = (e) => {
+    var valid = this.checkStatus();
+    if (valid) {
+      this.setState({sentStatus: true});
+      var self = this;
+      setTimeout(function() {
+        var form = self.state.form;
+        form.name = '';
+        form.address = '';
+        form.phone = '';
+        form.message = '';
+        self.setState({sentStatus: false});
+        self.setState({form});
+      }, 3000);
+    }
   }
 
   render() {
@@ -74,13 +142,13 @@ class Footer extends Component {
                     </p>
                   </Col>
                   <Col xl={3} lg={12} md={12} sm={12} className="ContactInfo">
-                    <Input required placeholder="Your Name" />
-                    <Input required placeholder="Email Address" />
-                    <Input placeholder="Phone Number" />
+                    <Input required placeholder="Your Name" style={{backgroundColor: this.state.status.name ? '#5ACED3' : '#ffaaaa'}} onChange={this.handleChangeName} value={this.state.form.name} />
+                    <Input required placeholder="Email Address" style={{backgroundColor: this.state.status.address ? '#5ACED3' : '#ffaaaa'}} onChange={this.handleChangeAddress} value={this.state.form.address} />
+                    <Input placeholder="Phone Number" onChange={this.handleChangePhone} value={this.state.form.phone} />
                   </Col>
                   <Col xl={5} lg={12} md={12} sm={12} className="ContactMessage">
-                    <Input textarea required placeholder="Your Message" />
-                    <Button label="Send Now" />
+                    <Input textarea required placeholder="Your Message" onChange={this.handleChangeMessage} value={this.state.form.message} />
+                    <Button label={this.state.sentStatus ? 'Sent' : 'Send Now'} onClick={this.handleSendNow} />
                   </Col>
                 </Row>
               </div>
