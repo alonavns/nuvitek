@@ -11,9 +11,8 @@ class Input extends Component {
               style={{ ...this.props.style }}
               placeholder={this.props.placeholder || ''}
               onChange={this.props.onChange || null}
-            >
-              {this.props.value}
-            </textarea>
+              value={this.props.value}
+            />
           ) : (
               <input
                 style={{ ...this.props.style }}

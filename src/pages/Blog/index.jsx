@@ -99,6 +99,7 @@ class Blog extends Component {
             <div className="Options">
               <div className="Search">
                 <Input placeholder="Search" style={{height: '40px'}} />
+                <div className="SearchBtn"><i className="fa fa-search"></i></div>
               </div>
               <div className="Subscribes">
                 <span className="SubscribeTitle">Subscribe</span>

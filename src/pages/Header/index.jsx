@@ -37,11 +37,11 @@ const LINKS = [
       },
       {
         label: "Automation",
-        url: "/cloud"
+        url: "/automation"
       },
       {
         label: "Transformation",
-        url: "/cloud"
+        url: "/transformation"
       },
     ]
   },
@@ -50,8 +50,8 @@ const LINKS = [
     url: "/careers"
   },
   {
-    label: "Blog",
-    url: "/blog"
+    label: "News",
+    url: "/news"
   }
 ];
 

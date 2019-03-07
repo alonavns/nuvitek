@@ -437,6 +437,7 @@
             line-height: 32px;
             font-size: 24px;
             letter-spacing: .5px;
+            text-align: left;
 
             color: #FFFFFF;
             position: absolute;
@@ -492,15 +493,18 @@
     }
   }
   .About {
+    border-top: 1px solid rgba(102, 104, 144, 0.2);
+    border-bottom: 1px solid rgba(102, 104, 144, 0.2);
     .row>div {
       position: relative;
-      padding-bottom: 0px;
-      margin-bottom: 30px;
+      padding: 50px;
+      &:first-child {
+        border-right: 1px solid rgba(102, 104, 144, 0.2);
+      }
       a {
         display: block;
-        position: absolute;
-        left: 15px;
-        bottom: 20px;
+        color: #48B3B7;
+        font-weight: bold;
       }
     }
     h2 {
@@ -615,6 +619,13 @@
         }
       }
     }
+    .About {
+      .row>div {
+        &:first-child {
+          border-right: 0;
+        }
+      }
+    }
   }
 }
 @media (max-width: 767px) {
@@ -631,8 +642,12 @@
             h1 {
               font-size: 24px;
               line-height: 32px;
+              text-align: center;
             }
           }
+        }
+        .Examples .Example .Title {
+          text-align: center;
         }
       }
     }

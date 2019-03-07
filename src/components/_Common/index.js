@@ -5,3 +5,4 @@ export { default as JoinUs } from './JoinUs';
 export { default as OurTeam } from './OurTeam';
 export { default as TeamBlock } from './TeamBlock';
 export { default as TeamMember } from './TeamMember';
+export { default as ScrollButton } from './ScrollButton';

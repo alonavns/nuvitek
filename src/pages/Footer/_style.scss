@@ -99,6 +99,13 @@
         color: #FFFFFF;
         margin-bottom: 35px;
       }
+      &:first-child li:before {
+        display: none;
+      }
+      &:first-child li i {
+        margin-left: -10px;
+        margin-right: 5px;
+      }
     }
   }
 
@@ -168,6 +175,7 @@
 
         .Input textarea {
           height: 113px;
+          resize: none;
         }
 
         .Button {

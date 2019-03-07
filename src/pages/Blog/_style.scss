@@ -59,6 +59,13 @@
       }
       .Search{
         float: right;
+        position: relative;
+        .SearchBtn {
+          position: absolute;
+          top: 7px;
+          right: 10px;
+          color: #fff;
+        }
       }
     }
   }

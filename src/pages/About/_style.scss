@@ -2,9 +2,11 @@
   overflow: hidden;
   h1 {
     font-size: 36px;
+    color: #112645;
   }
   .Col-1 {
     h1 {
+      color: #112645;
       text-align: center;
     }
   }
@@ -68,6 +70,7 @@
       font-size: 18px;
       line-height: 30px;
       margin: 10px 0 50px;
+      color: #284D82;
     }
     .Button{
       display: block;
@@ -149,6 +152,14 @@
 @media (max-width: 1199px) {
 }
 @media (max-width: 991px) {
+  .AboutWrapper {
+    .OurPartners {
+      text-align: center;
+    }
+    .OurCustomers {
+      text-align: center;
+    }
+  }
 }
 @media (max-width: 767px) {
 }

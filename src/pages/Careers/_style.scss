@@ -83,6 +83,7 @@
         font-size: 18px;
         letter-spacing: 0.5px;
         line-height: 30px;
+        color: #262e3f;
         a {
           color: #48b3b7;
         }
@@ -108,12 +109,14 @@
       .upload-filename {
         line-height: 50px;
         float: left;
+        color: #284d82;
       }
       .upload-button {
         float: right;
         line-height: 50px;
         width: 150px;
         text-align: center;
+        color: #284d82;
         cursor: pointer;
         border: 1px solid rgba(40, 77, 130, 0.2);
         background: rgba(162, 193, 238, 0.1);
@@ -129,6 +132,7 @@
         padding-left: 50px;
         line-height: 45px;
         position: relative;
+        color: #284d82;
         &:before{
           content: '';
           width: 14px;

@@ -50,7 +50,7 @@ class About extends Component {
               </Col>
             </Row>
           </Container>
-          <Button label="Contact Us Now" onClick={e => { this.handleClickButton('/contact-us') }}></Button>
+          <Button label="Contact Us Now" green onClick={e => { this.handleClickButton('/contact-us') }}></Button>
         </div>
         <div className="OurPartners">
           <Container>

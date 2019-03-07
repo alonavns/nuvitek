@@ -58,7 +58,7 @@ class Contact extends Component {
             </Row>
             <Row className="FormFooter">
               <Col lg={8}>
-                <p>I agree to accept Danal Terms and Conditions for this service.</p>
+                <p>I agree to accept Danal <a href="#">Terms and Conditions</a> for this service.</p>
                 <label>
                   <input type="checkbox" />
                   ACCEPT TERMS &amp; CONDITIONS

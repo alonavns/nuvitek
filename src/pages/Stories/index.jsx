@@ -6,8 +6,43 @@ import { StoryItem } from 'components/About'
 import photo from 'assets/images/team/member-1.png'
 
 class Stories extends Component {
-  render() {
-    const stories = [
+  state = {
+    stories: [
+      {
+        name: 'stripe',
+        description: 'Minimum suscipit an est, vim in aliquip fabulas, ea imperdiet pertinacia qui. Vim etiam inimicus interesset cu. Vis cu cetero blandit adversarium, ei solet fastidii scripserit nam. Fierent signiferumque eam ea.',
+        person: { name: 'Romain Briaux', photo: photo, example: '/stories', link: '/stories' },
+      },
+      {
+        name: 'stripe',
+        description: 'Minimum suscipit an est, vim in aliquip fabulas, ea imperdiet pertinacia qui. Vim etiam inimicus interesset cu. Vis cu cetero blandit adversarium, ei solet fastidii scripserit nam. Fierent signiferumque eam ea.',
+        person: { name: 'Romain Briaux', photo: photo, example: '/stories', link: '/stories' },
+      },
+      {
+        name: 'stripe',
+        description: 'Minimum suscipit an est, vim in aliquip fabulas, ea imperdiet pertinacia qui. Vim etiam inimicus interesset cu. Vis cu cetero blandit adversarium, ei solet fastidii scripserit nam. Fierent signiferumque eam ea.',
+        person: { name: 'Romain Briaux', photo: photo, example: '/stories', link: '/stories' },
+      },
+      {
+        name: 'stripe',
+        description: 'Minimum suscipit an est, vim in aliquip fabulas, ea imperdiet pertinacia qui. Vim etiam inimicus interesset cu. Vis cu cetero blandit adversarium, ei solet fastidii scripserit nam. Fierent signiferumque eam ea.',
+        person: { name: 'Romain Briaux', photo: photo, example: '/stories', link: '/stories' },
+      },
+      {
+        name: 'stripe',
+        description: 'Minimum suscipit an est, vim in aliquip fabulas, ea imperdiet pertinacia qui. Vim etiam inimicus interesset cu. Vis cu cetero blandit adversarium, ei solet fastidii scripserit nam. Fierent signiferumque eam ea.',
+        person: { name: 'Romain Briaux', photo: photo, example: '/stories', link: '/stories' },
+      },
+      {
+        name: 'stripe',
+        description: 'Minimum suscipit an est, vim in aliquip fabulas, ea imperdiet pertinacia qui. Vim etiam inimicus interesset cu. Vis cu cetero blandit adversarium, ei solet fastidii scripserit nam. Fierent signiferumque eam ea.',
+        person: { name: 'Romain Briaux', photo: photo, example: '/stories', link: '/stories' },
+      },
+    ],
+  }
+  handleLoadMore = (e) => {
+    var {stories} = this.state;
+    var newData = [
       {
         name: 'stripe',
         description: 'Minimum suscipit an est, vim in aliquip fabulas, ea imperdiet pertinacia qui. Vim etiam inimicus interesset cu. Vis cu cetero blandit adversarium, ei solet fastidii scripserit nam. Fierent signiferumque eam ea.',
@@ -39,6 +74,13 @@ class Stories extends Component {
         person: { name: 'Romain Briaux', photo: photo, example: '/stories', link: '/stories' },
       },
     ];
+    for (var i = 0; i < newData.length; i++) {
+      stories.push(newData[i]);
+    }
+    this.setState({stories});
+  }
+  render() {
+    const { stories } = this.state;
     return (
       <div className="StoriesWrapper">
         <div className="PageHeader">
@@ -65,7 +107,7 @@ class Stories extends Component {
             </Row>
             <Row>
               <Col className="align-center" lg={12}>
-                <Button label="Load More" />
+                <Button label="Load More" onClick={this.handleLoadMore} />
               </Col>
             </Row>
           </Container>

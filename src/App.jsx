@@ -32,14 +32,16 @@ class App extends Component {
               <Route exact path='/vehicles' render={() => <Vehicles />} />
               <Route exact path='/careers' render={() => <Careers />} />
               <Route exact path='/cloud' render={() => <Cloud />} />
+              <Route exact path='/automation' render={() => <Cloud />} />
+              <Route exact path='/transformation' render={() => <Cloud />} />
               <Route path='/contact-us'
                 render={({ match }) => <Contact match={match} />}
               />
               <Route exact path='/services' render={() => <About />} />
-              <Route exact path='/news' render={() => <About />} />
-              <Route exact path='/blog' render={() => <Blog />} />
-              <Route exact path='/blog/:id' render={() => <Article />} />
+              <Route exact path='/news' render={() => <Blog />} />
+              <Route exact path='/news/:id' render={() => <Article />} />
               <Redirect exact path='/' to={'home'} />
+              <Route exact path='*' render={() => <h1 style={{background: '#3ab0b3', padding: 200, textAlign: 'center', color: 'white', fontSize: 100, borderRadius: '0 0 30% 30%', boxShadow: '0 0 20px rgba(0, 0, 0, 0.4)'}}>Page Not Found!</h1>} />
             </Switch>
           }
           <Footer />
