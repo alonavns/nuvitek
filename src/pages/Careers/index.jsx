@@ -85,11 +85,6 @@ class Careers extends Component {
                 </Col>
               ))}
             </Row>
-            <Row>
-              <Col lg={12} className="align-center">
-                <Button label="Load More" />
-              </Col>
-            </Row>
           </Container>
         </div>
         <div className="UploadBenefits">
