@@ -148,6 +148,16 @@
       height: 200px;
       resize: none;
       border: 1px solid rgba(102, 104, 144, 0.2);
+      padding: 10px 20px;
+      border-radius: 2px;
+      &::placeholder{
+        color: #284d82;
+      }
+    }
+    input {
+      &::placeholder{
+        color: #284d82;
+      }
     }
     .Button {
       transform: translateY(-50px);
