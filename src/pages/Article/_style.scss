@@ -107,7 +107,9 @@
       font-weight: bold;
       color: #112645;
     }
-    border-bottom: 1px solid #eee;
+    &>div {
+      border-bottom: 1px solid #eee;
+    }
   }
   .Replies {
     margin: 50px auto;

@@ -16,7 +16,7 @@ class BlogItem extends Component {
         <h4>{data.name}</h4>
         <p>{data.description}</p>
         <div className="BlogOptions">
-          <div className="BlogReadMore"><NavLink to="/blog/1">Read More</NavLink></div>
+          <div className="BlogReadMore"><NavLink to="/news/1">Read More</NavLink></div>
           <div className="BlogComments"><i className="fa fa-commenting"></i> {data.comments} comments</div>
         </div>
       </div>
