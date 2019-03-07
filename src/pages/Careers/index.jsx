@@ -107,7 +107,7 @@ class Careers extends Component {
               </Col>
               <Col lg={6} md={12}>
                 <div className="form-title">
-                  <div className="form-title-text">Benefits</div>
+                  <div className="form-title-text">Benefits:</div>
                 </div>
                 <div className="benefits-panel">
                   <div className="benefits-item">Medical Insurance</div>
