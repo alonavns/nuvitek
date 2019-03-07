@@ -118,7 +118,7 @@ class Article extends Component {
             <Row>
               {blogs.map((blog, index) => (
                 <Col key={index} lg={4}>
-                  <BlogItem data={blog} />
+                  <BlogItem data={blog} likebtn />
                 </Col>
               ))}
             </Row>
