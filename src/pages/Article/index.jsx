@@ -80,7 +80,7 @@ class Article extends Component {
                 </div>
               </Col>
               <Col lg={8} md={12} className="ArticleContent">
-                <p>Nei esse natum te. Cu aeterno probatus omittantur mel, consul possit his ex, eu qui putent eripuit meliore. No simul regione pro, ei dictas facilisi mei. Ut sea mundi rationibus, dolorum accommodare et pri.</p>
+                <p><span>N</span>ei esse natum te. Cu aeterno probatus omittantur mel, consul possit his ex, eu qui putent eripuit meliore. No simul regione pro, ei dictas facilisi mei. Ut sea mundi rationibus, dolorum accommodare et pri.</p>
                 <p>Per nobis altera ullamcorper ne. At usu errem numquam principes. Errem prompta expetenda ne mei, vidit mutat et eum. Sit ex eligendi partiendo contentiones, sonet noster maiestatis est cu, maiorum postulant ea ius.</p>
                 <img src="https://placeimg.com/640/480/any" />
                 <p>Facete nostrud eos et, no vim oporteat dignissim, pri at tale nominavi. Luptatum dignissim dissentiunt ea quo, at per epicuri lucilius referrentur. Ea vix mazim debitis incorrupte, has ne saperet splendide elaboraret. No adhuc qualisque vim, his ludus nostro forensibus an. Primis inermis ius ne, mel senserit accusamus democritum te, ne unum sensibus interpretaris quo. His et diam debitis, ut eam elit natum.</p>

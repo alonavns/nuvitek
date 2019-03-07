@@ -76,11 +76,19 @@
         letter-spacing: 0.5px;
         margin: 20px 0;
         &:first-child {
-          &::first-letter{
-            font-size: 36px;
-            font-weight: bold;
-            float: left;
+          padding-left: 80px;
+          position: relative;
+          >span:first-child{
+            font-size: 100px;
+            position: absolute;
+            left: 5px;
+            top: 25px;
           }
+          // &::first-letter{
+          //   font-size: 36px;
+          //   font-weight: bold;
+          //   float: left;
+          // }
         }
         &.highlight {
           font-size: 35px;
