@@ -1,6 +1,35 @@
 .TeamBlock {
     margin-bottom: 50px;
-    h2 {
-        text-transform: uppercase;
+    .TeamBlockHeader {
+        overflow: hidden;
+        h2 {
+            text-transform: uppercase;
+            float: left;
+        }
+        .ScrollButtons {
+            float: right;
+            .ScrollButton {
+                background: rgba(40, 77, 130, 0.1);
+                color: rgba(40, 77, 130, 1);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                line-height: 40px;
+                text-align: center;
+                display: inline-block;
+                &.ScrollLeft{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .MembersContainer {
+        height: 500px;
+        overflow: hidden;
+        .MembersScroller {
+            position: absolute;
+            width: 9999px;
+            top: 0;
+        }
     }
 }
