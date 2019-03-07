@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
 import { Container, Row, Col } from 'reactstrap'
 
-import { Button, Input } from "components/_Common";
+import { Button, Input, ScrollButton } from "components/_Common";
 import logo from "assets/images/logo_name_black.svg";
 import mapIcon from "assets/images/map_icon.svg";
 
@@ -210,6 +210,7 @@ class Footer extends Component {
           <Col sm={4} xs={12}><NavLink to="/privacy">Privacy & Terms</NavLink></Col>
           </Row>
         </Container>
+        <ScrollButton scrollStepInPx="50" delayInMs="1"/>
       </div>
     );
   }
