@@ -135,7 +135,7 @@ class Header extends Component {
                 }
               })}
             </ul>
-            <Button label="Contact Us" onClick={this.handleMobileNavButton} />
+            <Button label="Contact Us" onClick={this.handleContactUs} />
           </div>
         </div>
       </div>
