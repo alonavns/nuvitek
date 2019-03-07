@@ -151,6 +151,7 @@ class Article extends Component {
           <Container>
             <Row>
               <Col lg={{size: 8, offset:2}} md={12}>
+                <h2>Leave Your Comment</h2>
                 <Row>
                   <Col lg={6} md={12}>
                     <Input placeholder="Display Name" white required style={{ height: 50, marginBottom: 15 }} />
