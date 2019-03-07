@@ -3,7 +3,6 @@
   h1 {
     font-size: 36px;
     color: #112645;
-    text-align: center;
   }
   .Col-1 {
     h1 {
@@ -153,6 +152,14 @@
 @media (max-width: 1199px) {
 }
 @media (max-width: 991px) {
+  .AboutWrapper {
+    .OurPartners {
+      text-align: center;
+    }
+    .OurCustomers {
+      text-align: center;
+    }
+  }
 }
 @media (max-width: 767px) {
 }
