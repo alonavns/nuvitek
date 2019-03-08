@@ -579,7 +579,7 @@
       .ColorText {
         margin: auto;
         display: block;
-        width: 200px;
+        width: 210px;
       }
       h2 {
         text-align: center;
@@ -656,9 +656,9 @@
     }
     .EmailForm {
       .Info {
-        font-size: 30px;
+        font-size: 32px;
         span {
-          font-size: 12px;
+          font-size: 14px;
         }
       }
       .SliddingForm {
@@ -685,4 +685,55 @@
   }
 }
 @media (max-width: 575px) {
+  .HomeWrapper {
+    .Blog {
+      .Blogs {
+        .Main {
+          .Back {
+            height: 250px;
+          }
+          .Info {
+            padding: 20px;
+            bottom: 30px;
+            h1 {
+              font-size: 24px;
+              line-height: 32px;
+              text-align: center;
+            }
+          }
+        }
+        .Examples .Example .Title {
+          text-align: center;
+        }
+      }
+    }
+    .EmailForm {
+      .Info {
+        font-size: 28px;
+        span {
+          font-size: 12px;
+        }
+      }
+      .SliddingForm {
+        padding-top: 100px;
+        input.Input {
+          height: 85px;
+          padding-left: 0;
+          padding-right: 0;
+          text-align: center;
+          font-size: 14px;
+          &.Valid {
+            width: 100%;
+          }
+        }
+        .Button {
+          text-align: center;
+          padding-right: 0;
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
 }
