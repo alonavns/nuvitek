@@ -67,6 +67,7 @@ class Header extends Component {
     this.setState({ activedSubmenu: index });
   }
   handleContactUs = (e) => {
+    this.setState({ mobileNavState: false })
     this.props.history.push('/contact-us');
   }
   render() {
