@@ -150,27 +150,27 @@ class Home extends Component {
           </div>
           <Container>
             <Row>
-              <Col lg={3} md={6} sm={12}>
+              <Col lg={3} md={6} sm={6} xs={6}>
                 <div className="Info">
                   +100 M<br />
                   <span>Conversations Enabled</span>
                 </div>
               </Col>
-              <Col lg={3} md={6} sm={12}>
+              <Col lg={3} md={6} sm={6} xs={6}>
                 <div className="Info">
                   99.99%
                   <br />
                   <span>Satisfied Customers</span>
                 </div>
               </Col>
-              <Col lg={3} md={6} sm={12}>
+              <Col lg={3} md={6} sm={6} xs={6}>
                 <div className="Info">
                   24/7
                   <br />
                   <span>Support</span>
                 </div>
               </Col>
-              <Col lg={3} md={6} sm={12}>
+              <Col lg={3} md={6} sm={6} xs={6}>
                 <div className="Info">
                   +20 years
                   <br />

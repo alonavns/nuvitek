@@ -200,11 +200,36 @@
       .Form {
         padding: 54px 70px;
         background-image: url("assets/images/back_modal_2.png");
+        .Description {
+          margin-bottom: 50px;
+        }
+        .ContactMessage {
+          .Button {
+            float: none;
+            margin: auto;
+            display: block;
+          }
+        }
       }
     }
   }
 }
 @media (max-width: 991px) {
+  .FooterWrapper{
+    .Links{
+      .row{
+        position: relative;
+        .LinksCol:nth-child(2) {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        .LinksCol:nth-child(3) {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 767px) {
 }
@@ -212,8 +237,17 @@
   .FooterWrapper{
     .ContactForm {
       .Form {
-        padding: 40px 50px;
-        margin-bottom: 50px;
+        padding: 40px 15px;
+        margin-bottom: 40px;
+      }
+    }
+    .Links{
+      .row{
+        .LinksCol {
+          .Title{
+            font-size: 14px;
+          }
+        }
       }
     }
     .CopyRight {
