@@ -172,6 +172,18 @@
           width: 100%;
         }
       }
+      &>.container>.row>div:first-child {
+        .form-title {
+          .form-title-text {
+            text-align: left;
+          }
+          .form-title-or {
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+          }
+        }
+      }
     }
   }
 }
