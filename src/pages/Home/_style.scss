@@ -655,6 +655,12 @@
       }
     }
     .EmailForm {
+      .Info {
+        font-size: 30px;
+        span {
+          font-size: 12px;
+        }
+      }
       .SliddingForm {
         padding-top: 100px;
         input.Input {
@@ -662,6 +668,7 @@
           padding-left: 0;
           padding-right: 0;
           text-align: center;
+          font-size: 16px;
           &.Valid {
             width: 100%;
           }
