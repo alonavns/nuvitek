@@ -159,6 +159,21 @@
 @media (max-width: 991px) {
 }
 @media (max-width: 767px) {
+  .CareersWrapper {
+    .UploadBenefits {
+      .form-title {
+        text-align: center;
+        .form-title-text{
+          width: 100%;
+        }
+      }
+      .benefits-panel {
+        .benefits-item {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 575px) {
 }

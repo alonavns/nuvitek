@@ -105,7 +105,7 @@ class Careers extends Component {
                 </div>
                 <Button label="Submit" style={{marginBottom: '50px'}} />
               </Col>
-              <Col lg={6} md={12}>
+              <Col lg={{size:6, offset: 0}} md={{size: 8, offset: 2}} sm={{size: 8, offset: 2}} xs={{size: 10, offset: 1}}>
                 <div className="form-title">
                   <div className="form-title-text">Benefits:</div>
                 </div>
