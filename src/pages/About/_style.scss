@@ -55,6 +55,9 @@
     max-width: 990px;
     margin: auto;
     position: relative;
+    &>div>div:first-child h1 {
+      text-align: center;
+    }
     &:before{
       content: '';
       position: absolute;
