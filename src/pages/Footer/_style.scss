@@ -200,6 +200,9 @@
       .Form {
         padding: 54px 70px;
         background-image: url("assets/images/back_modal_2.png");
+        .Description {
+          margin-bottom: 50px;
+        }
       }
     }
   }
@@ -212,8 +215,8 @@
   .FooterWrapper{
     .ContactForm {
       .Form {
-        padding: 40px 50px;
-        margin-bottom: 50px;
+        padding: 40px 15px;
+        margin-bottom: 40px;
       }
     }
     .CopyRight {
