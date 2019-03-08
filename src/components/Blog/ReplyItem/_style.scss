@@ -11,7 +11,7 @@
     }
     .ReplyInfo {
       float: left;
-      width: calc(100% - 110px);
+      width: calc(100% - 130px);
       padding: 10px;
       .ReplyerName{
         font-size: 18px;
@@ -23,12 +23,14 @@
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.44px;
+        color: #666890;
       }
     }
     .ReplyAgain {
       float: left;
       text-align: right;
       color: #666890;
+      padding: 10px;
       p {
         font-size: 14px;
         line-height: 20px;
@@ -41,6 +43,7 @@
     line-height: 25px;
     letter-spacing: 0.5px;
     padding: 10px 80px;
+    color: #284d82;
   }
   &+.ReplyItem {
     margin-left: 70px;
