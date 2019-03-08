@@ -116,7 +116,16 @@
       color: #112645;
     }
     &>div {
-      border-bottom: 1px solid #eee;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: calc(100% - 90px);
+        left: 45px;
+        bottom: 0;
+        background: #eee;
+      }
     }
   }
   .Replies {
