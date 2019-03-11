@@ -51,10 +51,10 @@ class App extends Component {
                   <h1
                     style={{
                       background: "#3ab0b3",
-                      padding: 200,
+                      padding: "200px 0",
                       textAlign: "center",
                       color: "white",
-                      fontSize: 100,
+                      fontSize: "10vw",
                       borderRadius: "0 0 30% 30%",
                       boxShadow: "0 0 20px rgba(0, 0, 0, 0.4)"
                     }}

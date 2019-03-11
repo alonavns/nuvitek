@@ -75,6 +75,7 @@
         line-height: 30px;
         letter-spacing: 0.5px;
         margin: 20px 0;
+        color: #284d82;
         &:first-child {
           padding-left: 80px;
           position: relative;
@@ -83,6 +84,7 @@
             position: absolute;
             left: 5px;
             top: 25px;
+            color: #272950;
           }
           // &::first-letter{
           //   font-size: 36px;
@@ -94,6 +96,7 @@
           font-size: 35px;
           line-height: 50px;
           font-style: italic;
+          color: #272950;
         }
       }
       img {
@@ -101,6 +104,9 @@
         margin-left: auto;
         margin-right: auto;
         display: block;
+      }
+      li {
+        color: #284d82;
       }
     }
   }
@@ -116,7 +122,16 @@
       color: #112645;
     }
     &>div {
-      border-bottom: 1px solid #eee;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: calc(100% - 90px);
+        left: 45px;
+        bottom: 0;
+        background: #eee;
+      }
     }
   }
   .Replies {

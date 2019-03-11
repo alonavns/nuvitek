@@ -129,7 +129,7 @@
       .benefits-item{
         width: 50%;
         float: left;
-        padding-left: 50px;
+        padding-left: 24px;
         line-height: 45px;
         position: relative;
         color: #284d82;
@@ -142,7 +142,7 @@
           border: 2px solid #fff;
           box-shadow: 0 2px 4px rgba(220, 221, 77, 0.3);
           position: absolute;
-          top: 10px;
+          top: 16px;
           left: 4px;
         }
       }
@@ -159,6 +159,33 @@
 @media (max-width: 991px) {
 }
 @media (max-width: 767px) {
+  .CareersWrapper {
+    .UploadBenefits {
+      .form-title {
+        text-align: center;
+        .form-title-text{
+          width: 100%;
+        }
+      }
+      .benefits-panel {
+        .benefits-item {
+          width: 100%;
+        }
+      }
+      &>.container>.row>div:first-child {
+        .form-title {
+          .form-title-text {
+            text-align: left;
+          }
+          .form-title-or {
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 575px) {
 }

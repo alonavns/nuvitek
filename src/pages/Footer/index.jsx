@@ -20,7 +20,6 @@ const LINKS = [
   {
     label: "Our Services",
     links: [
-      { label: "Our Services", href: '/our-services' },
       { label: "Cloud", href: '/cloud' },
       { label: "Automation", href: '/automation' },
       { label: "Transformation", href: '/transformation' }
@@ -157,7 +156,7 @@ class Footer extends Component {
         </Container>
         <Container className="Links">
           <Row>
-          <Col lg={{size:3, offset:0}} md={{size: 4, offset: 4}} sm={{size: 6, offset: 3}} xs={{size: 8, offset: 2}} className="Info">
+          <Col lg={{size:3, offset:0}} md={{size: 7, offset: 0}} sm={{size: 7, offset: 0}} xs={{size: 7, offset: 0}} className="Info">
             <NavLink className="Logo" to="/">
               <img src={logo} alt="Logo" />
             </NavLink>
@@ -183,10 +182,10 @@ class Footer extends Component {
               </div>
             </div>
           </Col>
-          <Col lg={{size:9, offset:0}} md={{size:12, offset: 0}} sm={{size: 6, offset: 3}} xs={{size: 8, offset: 2}}>
-            <Row>
+          {/* <Col lg={{size:9, offset:0}} md={{size:12, offset: 0}} sm={{size: 6, offset: 3}} xs={{size: 8, offset: 2}}> */}
+            {/* <Row> */}
               {LINKS.map((col, index) => (
-                <Col lg={4} md={4} className={`LinksCol`} key={index}>
+                <Col lg={3} md={index==2 ? 7 : 5} sm={index==2 ? 7 : 5} xs={index==2 ? 7 : 5} className={`LinksCol`} key={index}>
                   <div className="Title">{col.label}</div>
                   <ul>
                     {col.links.map((link, cIndex) => (
@@ -200,8 +199,8 @@ class Footer extends Component {
                   </ul>
                 </Col>
               ))}
-            </Row>
-          </Col>
+            {/* </Row> */}
+          {/* </Col> */}
           </Row>
         </Container>
         <Container className="CopyRight">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink, withRouter } from "react-router-dom";
+import { Container, Row, Col } from 'reactstrap'
 
 class CareerItem extends Component {
   state = {
@@ -27,13 +28,15 @@ class CareerItem extends Component {
         {this.state.actived && (
         <div className={'CareerDetails'}>
           <p>{this.props.data.description}</p>
-          <div className={'Row'}>
+          <Container>
+          <Row>
             {this.props.data.links.map((link, index) => (
-              <div key={index} className={'Col Col-2'}>
+              <Col key={index} lg={12} md={6}>
                 <NavLink to={link.url}>{link.label}</NavLink>
-              </div>
+              </Col>
             ))}
-          </div>
+          </Row>
+          </Container>
         </div>
         )}
       </div>
