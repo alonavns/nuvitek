@@ -17,52 +17,10 @@ class Admin extends Component {
     this.state = {
       user: null
     };
-
-    props.firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        const { isAnonymous, uid } = user;
-        this.setState({ user: { uid, isAnonymous } });
-
-        collections.forEach(collection => {
-          this.props.firestore.collection(collection).onSnapshot(doc => {
-            this.props.firestore
-              .collection(collection)
-              .get()
-              .then(querySnapshot => {
-                const data = [];
-                querySnapshot.forEach(doc => {
-                  data.push(doc.data());
-                });
-                this.setState({ [collection]: data });
-              })
-              .catch(function(error) {
-                console.log("Error getting documents: ", error);
-              });
-          });
-
-          this.props.firestore
-            .collection(collection)
-            .get()
-            .then(querySnapshot => {
-              const data = [];
-              querySnapshot.forEach(doc => {
-                data.push(doc.data());
-              });
-              console.log(data);
-              this.setState({ [collection]: data });
-            })
-            .catch(function(error) {
-              console.log("Error getting documents: ", error);
-            });
-        });
-      } else {
-        this.setState({ user: null });
-      }
-    });
   }
 
   componentDidMount() {
-    this.props.firebase.auth().signInAnonymously();
+    // this.props.firebase.auth().signInAnonymously();
     const { inputs } = TabInfo[0];
     this.resetFormData(inputs);
   }
@@ -239,6 +197,7 @@ class Admin extends Component {
   };
 
   render() {
+    const { database } = this.props;
     return (
       <div className="AdminWrapper">
         <Tabs onSelect={this.handleTabChange}>
@@ -288,7 +247,7 @@ class Admin extends Component {
                         </tr>
                       </thead>
                       <tbody>
-                        {(this.state[TabInfo[index].ref.collection] || []).map(
+                        {(database[TabInfo[index].ref.collection] || []).map(
                           (item, itemIndex) => (
                             <tr key={itemIndex}>
                               <th scope="row">{itemIndex + 1}</th>

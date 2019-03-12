@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FadeIn from "react-fade-in";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { withFirestore } from "react-redux-firebase";
 
 import {
   Admin,
@@ -17,17 +18,74 @@ import {
   Cloud
 } from "pages";
 
+import { TabInfo } from "pages/Admin/tabs";
+const collections = TabInfo.map(tab => tab.ref.collection);
+
 import "./App.scss";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: null,
+      database: {}
+    };
+
+    props.firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        const { isAnonymous, uid } = user;
+        this.setState({ user: { uid, isAnonymous } });
+
+        collections.forEach(collection => {
+          this.props.firestore.collection(collection).onSnapshot(doc => {
+            this.props.firestore
+              .collection(collection)
+              .get()
+              .then(querySnapshot => {
+                const data = [];
+                querySnapshot.forEach(doc => {
+                  data.push(doc.data());
+                });
+                const { database } = this.state;
+                database[collection] = data;
+                this.setState({ database });
+              })
+              .catch(function(error) {
+                console.log("Error getting documents: ", error);
+              });
+          });
+
+          this.props.firestore
+            .collection(collection)
+            .get()
+            .then(querySnapshot => {
+              const data = [];
+              querySnapshot.forEach(doc => {
+                data.push(doc.data());
+              });
+              const { database } = this.state;
+              database[collection] = data;
+              this.setState({ database });
+            })
+            .catch(function(error) {
+              console.log("Error getting documents: ", error);
+            });
+        });
+      } else {
+        this.setState({ user: null });
+      }
+    });
+  }
   render() {
+    const { database } = this.state;
     return (
       <FadeIn>
         <div className="AppWrapper">
           <Header />
           {
             <Switch>
-              <Route exact path="/admin" render={() => <Admin />} />
+              <Route exact path="/admin" render={() => <Admin database={database} />} />
               <Route exact path="/home" render={() => <Home />} />
               <Route exact path="/about-us" render={() => <About />} />
               <Route exact path="/stories" render={() => <Stories />} />
@@ -72,4 +130,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withFirestore(App);
