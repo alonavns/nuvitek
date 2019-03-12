@@ -76,7 +76,9 @@ class App extends Component {
         this.setState({ user: null });
       }
     });
+    props.firebase.auth().signInAnonymously();
   }
+
   render() {
     const { database } = this.state;
     return (

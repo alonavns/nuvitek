@@ -8,8 +8,6 @@ import { Button, Input } from "components/_Common";
 
 import "react-tabs/style/react-tabs.css";
 
-const collections = TabInfo.map(tab => tab.ref.collection);
-
 class Admin extends Component {
   constructor(props) {
     super(props);
