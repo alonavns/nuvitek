@@ -1,8 +1,89 @@
 .AdminWrapper {
   background: rgb(58, 176, 179);
-  padding: 200px;
+  padding: 200px 100px 100px;
   text-align: center;
   color: white;
   border-radius: 0 0 5vw 5vw;
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 20px;
+
+  .row {
+    text-align: left;
+  }
+
+  .col > * {
+    width: 100%;
+  }
+
+  .ImageUpload {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px;
+    padding: 9px;
+    min-height: 118px;
+
+    h5 {
+      margin-right: 15px;
+    }
+
+    img {
+      max-height: 100px;
+      width: 100px;
+    }
+  }
+
+  .Input input {
+    margin-bottom: 5px;
+  }
+
+  table {
+    color: white;
+    margin-top: 20px;
+
+    button {
+      line-height: initial;
+    }
+
+    img {
+      max-height: 100px;
+      width: 100px;
+    }
+
+    td > div {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  input[type=checkbox] {
+    margin-right: 40px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: #284d82;
+      border-radius: 5px;
+      top: -7px;
+      left: 0;
+    }
+
+    &:checked:after {
+      content: '\f00c';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      color: #fff;
+      top: -7px;
+      font-family: FontAwesome;
+    }
+  }
 }
