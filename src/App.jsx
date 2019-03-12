@@ -89,7 +89,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/admin" render={() => <Admin database={database} />} />
               <Route exact path="/home" render={() => <Home />} />
-              <Route exact path="/about-us" render={() => <About />} />
+              <Route exact path="/about-us" render={() => <About database={database} />} />
               <Route exact path="/stories" render={() => <Stories />} />
               <Route exact path="/vehicles" render={() => <Vehicles />} />
               <Route exact path="/careers" render={() => <Careers />} />
@@ -101,8 +101,8 @@ class App extends Component {
                 render={({ match }) => <Contact match={match} />}
               />
               <Route exact path="/services" render={() => <About />} />
-              <Route exact path="/news" render={() => <Blog />} />
-              <Route exact path="/news/:id" render={() => <Article />} />
+              <Route exact path="/news" render={() => <Blog database={database} />} />
+              <Route exact path="/news/:articleId" render={(props) => <Article {...props} database={database} />} />
               <Redirect exact path="/" to={"home"} />
               <Route
                 exact

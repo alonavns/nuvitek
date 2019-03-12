@@ -17,6 +17,10 @@
     position: absolute;
     top: 210px;
     right: 10px;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    border: 2px solid #fff;
   }
   .LikeBtn{
     position: absolute;
@@ -42,6 +46,14 @@
     font-size: 16px;
     letter-spacing: 0.5px;
     line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    --moz-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    --moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    height: 77px;
   }
   .BlogOptions {
     margin-top: 20px;

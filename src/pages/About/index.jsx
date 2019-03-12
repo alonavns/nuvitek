@@ -94,7 +94,7 @@ class About extends Component {
         </div>
         <div className="OurTeam">
           <h1>Our Team</h1>
-          <OurTeam />
+          <OurTeam database={this.props.database} />
         </div>
         <div className="OurCustomers">
           <Container>

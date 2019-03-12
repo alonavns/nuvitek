@@ -9,80 +9,7 @@ import writerImage1 from 'assets/images/home/blog-writer.png'
 
 class Blog extends Component {
   render() {
-    const blogs = [
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-    ];
+    const blogs = this.props.database.articles ? this.props.database.articles : [];
     return (
       <div className="BlogWrapper">
         <div className="PageHeader">
@@ -118,7 +45,7 @@ class Blog extends Component {
             <Row>
               {blogs.map((blog, index) => (
                 <Col key={index} lg={4}>
-                  <BlogItem data={blog} />
+                  <BlogItem data={blog} index={index} />
                 </Col>
               ))}
             </Row>

@@ -8,32 +8,11 @@ import writerImage1 from 'assets/images/home/blog-writer.png'
 
 class Article extends Component {
   render() {
-    const blogs = [
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-      {
-        category: 'Technology',
-        name: 'Make Myspace Your Best Designed Space',
-        description: 'You’ve felt it. Your organic content doesn’t have the same reach on social media anymore…',
-        comments: 2,
-        photo: blogImage1,
-        writer: writerImage1,
-      },
-    ];
+    var article = this.props.database.articles ? this.props.database.articles[this.props.match.params.articleId] : {};
+    var blogs = [];
+    if (this.props.database.articles)
+    for(var i = 0; i < this.props.database.articles.length; i++)
+    if (i < 3) blogs.push(this.props.database.articles[i]);
     const replies = [
       { photo: writerImage1, name: 'Maiki Krotes', date: '05/09/2018', text: 'Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper.'},
       { photo: writerImage1, name: 'Maiki Krotes', date: '05/09/2018', text: 'Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper.', children: [
@@ -53,7 +32,7 @@ class Article extends Component {
             </Row>
             <Row className="WriterInfo">
               <Col lg={12}>
-                <img src={writerImage1} alt="" />
+                <img src={article.image2} alt="" />
                 <p className="WriterName">Marvin Figueroa</p>
               </Col>
             </Row>
@@ -65,7 +44,7 @@ class Article extends Component {
             </Row>
           </Container>
         </div>
-        <div className="ArticleContainer">
+        {article.content1 && (<div className="ArticleContainer">
           <Container>
             <Row>
               <Col lg={2}>
@@ -80,13 +59,13 @@ class Article extends Component {
                 </div>
               </Col>
               <Col lg={8} md={12} className="ArticleContent">
-                <p><span>N</span>ei esse natum te. Cu aeterno probatus omittantur mel, consul possit his ex, eu qui putent eripuit meliore. No simul regione pro, ei dictas facilisi mei. Ut sea mundi rationibus, dolorum accommodare et pri.</p>
-                <p>Per nobis altera ullamcorper ne. At usu errem numquam principes. Errem prompta expetenda ne mei, vidit mutat et eum. Sit ex eligendi partiendo contentiones, sonet noster maiestatis est cu, maiorum postulant ea ius.</p>
-                <img src="https://placeimg.com/640/480/any" />
-                <p>Facete nostrud eos et, no vim oporteat dignissim, pri at tale nominavi. Luptatum dignissim dissentiunt ea quo, at per epicuri lucilius referrentur. Ea vix mazim debitis incorrupte, has ne saperet splendide elaboraret. No adhuc qualisque vim, his ludus nostro forensibus an. Primis inermis ius ne, mel senserit accusamus democritum te, ne unum sensibus interpretaris quo. His et diam debitis, ut eam elit natum.</p>
-                <p className="highlight">“Civibus nominavi pericula cu pro. Vis atqui propriae at. Has dicant utroque sapientem eu, in error splendide mel”</p>
-                <p>Lorem ipsum dolor sit amet, iuvaret perfecto adipisci ne pro, vis ex gubergren referrentur. Et exerci graecis definiebas sit, an diam posse persecuti ius, mei natum sonet salutatus cu. Purto suscipit electram ne eos, tation philosophia ut sed, pro ne malis congue. Eligendi salutandi contentiones usu no, in sit detracto molestiae forensibus. Pro ne accusata accusamus dignissim, ne inimicus constituto vituperatoribus vis.</p>
-                <p>Vix incorrupte ullamcorper ut. At pro stet nobis, ei detracto consequuntur vel. Ei putant commodo scaevola eam. An salutandi suscipiantur sed.</p>
+                <p><span>{article.content1[0]}</span>{article.content1.substring(1)}</p>
+                {/* <p>Per nobis altera ullamcorper ne. At usu errem numquam principes. Errem prompta expetenda ne mei, vidit mutat et eum. Sit ex eligendi partiendo contentiones, sonet noster maiestatis est cu, maiorum postulant ea ius.</p> */}
+                <img src={article.image1} />
+                <p>{article.content2}</p>
+                <p className="highlight">{article.content3}</p>
+                <p>{article.content4}</p>
+                <p>{article.content5}</p>
                 <Row>
                   <Col lg={6}>
                   <img src="https://placeimg.com/480/600/any" />
@@ -99,13 +78,13 @@ class Article extends Component {
                     <li>Are You Ready To Buy A Home Theater Audio System</li>
                     <li>WordPress Version 2 0 3 Review</li>
                   </ul>
-                  <p>Facete nostrud eos et, no vim oporteat dignissim, pri at tale nominavi. Luptatum dignissim dissentiunt ea quo, at per epicuri lucilius referrentur. Ea vix mazim debitis incorrupte, has ne saperet splendide elaboraret. No adhuc qualisque vim, his ludus nostro forensibus an.</p>
+                  <p>{article.content6}</p>
                   </Col>
                 </Row>
               </Col>
             </Row>
           </Container>
-        </div>
+        </div>)}
         <div className="MightLikes">
           <Container>
             <Row>
@@ -159,7 +138,7 @@ class Article extends Component {
                     <p className="description"><i className="fa fa-info-circle"></i> (will not be shared)</p>
                   </Col>
                   <Col lg={6} md={12}>
-                    <textarea placeholder="Comment text ..." value="" />
+                    <textarea placeholder="Comment text ..." value="" onChange={(e) => {}} />
                   </Col>
                   <Col lg={6} md={12}>
                     <Button label="SEND NOW" style={{ height: 50, lineHeight: '50px' }} />

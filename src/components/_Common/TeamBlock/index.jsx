@@ -7,11 +7,13 @@ class TeamBlock extends Component {
     left: 15,
   }
   moveContainer = (a) => {
+    var members = this.props.data.members;
+    if (members == undefined) members = [];
     var { left } = this.state;
     left += a * 370;
     if (left > 15) left = 15;
-    if (left < 15 - (this.props.data.members.length - 1) * 370)
-      left = 15 - (this.props.data.members.length - 1) * 370
+    if (left < 15 - (members.length - 1) * 370)
+      left = 15 - (members.length - 1) * 370
     this.setState({left});
   }
   handleLeft = (e) => {
@@ -21,6 +23,8 @@ class TeamBlock extends Component {
     this.moveContainer(1);
   }
   render() {
+    var members = this.props.data.members;
+    if (members == undefined) members = [];
     return (
       <div className="TeamBlock">
         <Container>
@@ -34,7 +38,7 @@ class TeamBlock extends Component {
           <Row>
             <Col lg={12} className="MembersContainer">
               <div className="MembersScroller" style={{left: this.state.left}}>
-              {this.props.data.members.map((member, index) => (
+              {members.map((member, index) => (
                 <TeamMember key={index} data={member} />
               ))}
               </div>

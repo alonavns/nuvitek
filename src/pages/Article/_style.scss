@@ -25,6 +25,12 @@
     .WriterInfo {
       margin-top: 100px;
       color: #fff;
+      img {
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
     }
     .ArticleInfo {
       margin-top: -30px;
